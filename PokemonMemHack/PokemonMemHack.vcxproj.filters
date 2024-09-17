@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="MemPm">
+      <UniqueIdentifier>{b4c2b407-794c-4ad2-a3a7-6a0294d8fa7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemPm\Source Files">
+      <UniqueIdentifier>{3b7fcb39-9821-4380-93ba-289ce4a5e262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemPm\Header Files">
+      <UniqueIdentifier>{872b405f-b15f-426a-81ea-75e2b52b84dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemMisc">
+      <UniqueIdentifier>{c38d9d09-95b2-44fb-ab7a-c24a0f72ce85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemMisc\Source Files">
+      <UniqueIdentifier>{5f9ff5de-4e28-4b1b-8d1e-8f3106c947d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemMisc\Header Files">
+      <UniqueIdentifier>{1517e7c8-9d6a-43ca-baf6-d5857006737b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Text">
+      <UniqueIdentifier>{e5489a96-229d-4c8b-b389-3b6f95f941e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OwnerDraw">
+      <UniqueIdentifier>{57c25e15-f9de-4ad6-9ec5-c57fdeb71577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OwnerDraw\Header Files">
+      <UniqueIdentifier>{7fb62d4a-ab77-4b0c-9de1-aea05d9a4675}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="OwnerDraw\Source Files">
+      <UniqueIdentifier>{2cfa1ff0-b22b-482d-acb1-aec170fcdc98}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PokemonMemHack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PokemonMemHackCore.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PokemonMemHackDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="StringReader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MemPmAbilityPage.cpp">
+      <Filter>MemPm\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemPmBasicPage.cpp">
+      <Filter>MemPm\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemPmMiscPage.cpp">
+      <Filter>MemPm\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemPmPage.cpp">
+      <Filter>MemPm\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemPmRibbonPage.cpp">
+      <Filter>MemPm\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemPmSkillPage.cpp">
+      <Filter>MemPm\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemPmTabPage.cpp">
+      <Filter>MemPm\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemMiscPage0.cpp">
+      <Filter>MemMisc\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemMiscPage1.cpp">
+      <Filter>MemMisc\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemMiscPage2.cpp">
+      <Filter>MemMisc\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillComboBox.cpp">
+      <Filter>OwnerDraw\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillListBox.cpp">
+      <Filter>OwnerDraw\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PokemonMemHack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PokemonMemHackCore.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PokemonMemHackDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StringReader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MemPmAbilityPage.h">
+      <Filter>MemPm\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemPmBasicPage.h">
+      <Filter>MemPm\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemPmMiscPage.h">
+      <Filter>MemPm\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemPmPage.h">
+      <Filter>MemPm\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemPmRibbonPage.h">
+      <Filter>MemPm\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemPmSkillPage.h">
+      <Filter>MemPm\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemPmTabPage.h">
+      <Filter>MemPm\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemMiscPage0.h">
+      <Filter>MemMisc\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemMiscPage1.h">
+      <Filter>MemMisc\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemMiscPage2.h">
+      <Filter>MemMisc\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillComboBox.h">
+      <Filter>OwnerDraw\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillListBox.h">
+      <Filter>OwnerDraw\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\mark0.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\mark1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\mark2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\mark3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\nya.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PokemonMemHack.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\PokemonMemHack.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="AreaNameList.txt">
+      <Filter>Text</Filter>
+    </Text>
+    <Text Include="BreedNameList.txt">
+      <Filter>Text</Filter>
+    </Text>
+    <Text Include="ItemDescList.txt">
+      <Filter>Text</Filter>
+    </Text>
+    <Text Include="ItemNameList.txt">
+      <Filter>Text</Filter>
+    </Text>
+    <Text Include="PersonalityList.txt">
+      <Filter>Text</Filter>
+    </Text>
+    <Text Include="SkillDescList.txt">
+      <Filter>Text</Filter>
+    </Text>
+    <Text Include="SkillNameList.txt">
+      <Filter>Text</Filter>
+    </Text>
+    <Text Include="SpecDescList.txt">
+      <Filter>Text</Filter>
+    </Text>
+    <Text Include="SpecNameList.txt">
+      <Filter>Text</Filter>
+    </Text>
+    <Text Include="使用帮助.txt">
+      <Filter>Text</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
