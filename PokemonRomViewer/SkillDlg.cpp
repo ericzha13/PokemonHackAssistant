@@ -1,4 +1,4 @@
-// SkillDlg.cpp : ÊµÏÖÎÄ¼ş
+// SkillDlg.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -11,7 +11,7 @@ struct SkillSortParam
 	BOOL	bAscending;
 };
 
-// CSkillDlg ¶Ô»°¿ò
+// CSkillDlg å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CSkillDlg, CBaseDialog)
 CSkillDlg::CSkillDlg()
@@ -43,13 +43,13 @@ BEGIN_MESSAGE_MAP(CSkillDlg, CBaseDialog)
 END_MESSAGE_MAP()
 
 
-// CSkillDlg ÏûÏ¢´¦Àí³ÌĞò
+// CSkillDlg æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 BOOL CSkillDlg::OnInitDialog()
 {
 	CBaseDialog::OnInitDialog();
 
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯
+	// TODO:  åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–
 	DWORD	dwIndex, dwItem;
 	CString	szText;
 
@@ -69,24 +69,24 @@ BOOL CSkillDlg::OnInitDialog()
 	}
 
 	m_ctrlSkillList.SetExtendedStyle(LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES | LVS_EX_HEADERDRAGDROP);
-	m_ctrlSkillList.InsertColumn(0,		_T("Ãû³Æ"),			LVCFMT_LEFT, 110,	0);
-	m_ctrlSkillList.InsertColumn(1,		_T("±àºÅ"),			LVCFMT_LEFT, 40,	1);
-	m_ctrlSkillList.InsertColumn(2,		_T("ÊôĞÔ"),			LVCFMT_LEFT, 50,	2);
-	m_ctrlSkillList.InsertColumn(3,		_T("ÍşÁ¦"),			LVCFMT_LEFT, 40,	3);
-	m_ctrlSkillList.InsertColumn(4,		_T("ÃüÖĞ"),			LVCFMT_LEFT, 40,	4);
-	m_ctrlSkillList.InsertColumn(5,		_T("£Ğ£Ğ"),			LVCFMT_LEFT, 40,	5);
-	m_ctrlSkillList.InsertColumn(6,		_T("Ğ§¹û"),			LVCFMT_LEFT, 40,	6);
-	m_ctrlSkillList.InsertColumn(7,		_T("¼¸ÂÊ"),			LVCFMT_LEFT, 40,	7);
-	m_ctrlSkillList.InsertColumn(8,		_T("¶ÔÏó"),			LVCFMT_LEFT, 65,	8);
-	m_ctrlSkillList.InsertColumn(9,		_T("ÓÅÏÈ"),			LVCFMT_LEFT, 40,	9);
-	m_ctrlSkillList.InsertColumn(10,	_T("½ü"),			LVCFMT_LEFT, 25,	10);
-	m_ctrlSkillList.InsertColumn(11,	_T("ÊØ"),			LVCFMT_LEFT, 25,	10);
-	m_ctrlSkillList.InsertColumn(12,	_T("Ìæ"),			LVCFMT_LEFT, 25,	10);
+	m_ctrlSkillList.InsertColumn(0,		_T("åç§°"),			LVCFMT_LEFT, 110,	0);
+	m_ctrlSkillList.InsertColumn(1,		_T("ç¼–å·"),			LVCFMT_LEFT, 40,	1);
+	m_ctrlSkillList.InsertColumn(2,		_T("å±æ€§"),			LVCFMT_LEFT, 50,	2);
+	m_ctrlSkillList.InsertColumn(3,		_T("å¨åŠ›"),			LVCFMT_LEFT, 40,	3);
+	m_ctrlSkillList.InsertColumn(4,		_T("å‘½ä¸­"),			LVCFMT_LEFT, 40,	4);
+	m_ctrlSkillList.InsertColumn(5,		_T("ï¼°ï¼°"),			LVCFMT_LEFT, 40,	5);
+	m_ctrlSkillList.InsertColumn(6,		_T("æ•ˆæœ"),			LVCFMT_LEFT, 40,	6);
+	m_ctrlSkillList.InsertColumn(7,		_T("å‡ ç‡"),			LVCFMT_LEFT, 40,	7);
+	m_ctrlSkillList.InsertColumn(8,		_T("å¯¹è±¡"),			LVCFMT_LEFT, 65,	8);
+	m_ctrlSkillList.InsertColumn(9,		_T("ä¼˜å…ˆ"),			LVCFMT_LEFT, 40,	9);
+	m_ctrlSkillList.InsertColumn(10,	_T("è¿‘"),			LVCFMT_LEFT, 25,	10);
+	m_ctrlSkillList.InsertColumn(11,	_T("å®ˆ"),			LVCFMT_LEFT, 25,	10);
+	m_ctrlSkillList.InsertColumn(12,	_T("æ›¿"),			LVCFMT_LEFT, 25,	10);
 	m_ctrlSkillList.InsertColumn(13,	_T("?0"),			LVCFMT_LEFT, 25,	10);
 	m_ctrlSkillList.InsertColumn(14,	_T("?1"),			LVCFMT_LEFT, 25,	10);
-	m_ctrlSkillList.InsertColumn(15,	_T("Íõ"),			LVCFMT_LEFT, 25,	10);
-	m_ctrlSkillList.InsertColumn(16,	_T("Ğ§¹ûËµÃ÷"),		LVCFMT_LEFT, 250,	11);
-	m_ctrlSkillList.InsertColumn(17,	_T("ÌØÊâ"),			LVCFMT_LEFT, 100,	12);
+	m_ctrlSkillList.InsertColumn(15,	_T("ç‹"),			LVCFMT_LEFT, 25,	10);
+	m_ctrlSkillList.InsertColumn(16,	_T("æ•ˆæœè¯´æ˜"),		LVCFMT_LEFT, 250,	11);
+	m_ctrlSkillList.InsertColumn(17,	_T("ç‰¹æ®Š"),			LVCFMT_LEFT, 100,	12);
 
 	for(dwIndex = 0; dwIndex < SKILL_COUNT; ++dwIndex)
 	{
@@ -95,7 +95,7 @@ BOOL CSkillDlg::OnInitDialog()
 	}
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CSkillDlg::SetSkillListItem(WORD wIndex)
@@ -111,46 +111,46 @@ void CSkillDlg::SetSkillListItem(WORD wIndex)
 	wSkill = (WORD)(m_ctrlSkillList.GetItemData(wIndex));
 	pSkill = rom.GetSkillListEntry(wSkill);
 
-	// ÊôĞÔ
+	// å±æ€§
 	m_ctrlSkillList.SetItemText(wIndex, 2, szTypes[pSkill->bType]);
 
-	// ÍşÁ¦
+	// å¨åŠ›
 	szText.Format(_T("%lu"), (DWORD)(pSkill->bPower));
 	m_ctrlSkillList.SetItemText(wIndex, 3, szText);
 
-	// ÃüÖĞ
+	// å‘½ä¸­
 	szText.Format(_T("%lu"), (DWORD)(pSkill->bAccuracy));
 	m_ctrlSkillList.SetItemText(wIndex, 4, szText);
 
-	// £Ğ£Ğ
+	// ï¼°ï¼°
 	szText.Format(_T("%lu"), (DWORD)(pSkill->bPP));
 	m_ctrlSkillList.SetItemText(wIndex, 5, szText);
 
-	// Ğ§¹û
+	// æ•ˆæœ
 	szText.Format(_T("%02lXh"), (DWORD)(pSkill->bEffect));
 	m_ctrlSkillList.SetItemText(wIndex, 6, szText);
 
-	// ¼¸ÂÊ
+	// å‡ ç‡
 	szText.Format(_T("%lu"), (DWORD)(pSkill->bEffectRatio));
 	m_ctrlSkillList.SetItemText(wIndex, 7, szText);
 
-	// ¶ÔÏó
+	// å¯¹è±¡
 	dwTargetTypeIndex = GetTargetTypeIndex(pSkill->bTargetType);
 	m_ctrlSkillList.SetItemText(wIndex, 8, rgSkillTargetTypes[dwTargetTypeIndex].szName);
 
-	// ÓÅÏÈ¶È
+	// ä¼˜å…ˆåº¦
 	szText.Format(_T("%li"), (LONG)(pSkill->nPriority));
 	m_ctrlSkillList.SetItemText(wIndex, 9, szText);
 
-	// ½ü
+	// è¿‘
 	szText.Format(_T("%lu"), (pSkill->dwFlags & skl_melee) ? 1 : 0);
 	m_ctrlSkillList.SetItemText(wIndex, 10, szText);
 
-	// ÊØ
+	// å®ˆ
 	szText.Format(_T("%lu"), (pSkill->dwFlags & skl_protect) ? 1 : 0);
 	m_ctrlSkillList.SetItemText(wIndex, 11, szText);
 
-	// Ìæ
+	// æ›¿
 	szText.Format(_T("%lu"), (pSkill->dwFlags & skl_substitute) ? 1 : 0);
 	m_ctrlSkillList.SetItemText(wIndex, 12, szText);
 
@@ -162,14 +162,14 @@ void CSkillDlg::SetSkillListItem(WORD wIndex)
 	szText.Format(_T("%lu"), (pSkill->dwFlags & skl_unk1) ? 1 : 0);
 	m_ctrlSkillList.SetItemText(wIndex, 14, szText);
 
-	// Íõ
+	// ç‹
 	szText.Format(_T("%lu"), (pSkill->dwFlags & skl_kingsrock) ? 1 : 0);
 	m_ctrlSkillList.SetItemText(wIndex, 15, szText);
 
-	// Ğ§¹ûËµÃ÷
+	// æ•ˆæœè¯´æ˜
 	m_ctrlSkillList.SetItemText(wIndex, 16, cfg.pSkillEffList[pSkill->bEffect].rgszText[cfg.dwLang]);
 
-	// ÌØÊâËµÃ÷
+	// ç‰¹æ®Šè¯´æ˜
 	m_ctrlSkillList.SetItemText(wIndex, 17, cfg.pSkillSpecList[wSkill].rgszText[cfg.dwLang]);
 }
 
@@ -199,10 +199,10 @@ void CSkillDlg::OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged)
 		{
 			wSkill = (WORD)(m_ctrlSkillList.GetItemData(wIndex));
 
-			// Ãû³Æ
+			// åç§°
 			m_ctrlSkillList.SetItemText(wIndex, 0, cfg.pSkillNameList[wSkill].rgszText[cfg.dwLang]);
 
-			// ±àºÅ
+			// ç¼–å·
 			szText.Format(szFmt33[cfg.dwCount], wSkill);
 			m_ctrlSkillList.SetItemText(wIndex, 1, szText);
 		}
@@ -221,7 +221,7 @@ void CSkillDlg::OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged)
 			m_ctrlSkillList.SetItemState(0, -1, LVIS_SELECTED | LVIS_FOCUSED);
 	}
 
-	// ËµÃ÷
+	// è¯´æ˜
 	if(bUILangChanged)
 		SetSkillDesc();
 }
@@ -235,55 +235,55 @@ INT CALLBACK CSkillDlg::SortSkills(LPARAM lParam1, LPARAM lParam2, LPARAM lParam
 
 	switch(pSSP->iSubItem)
 	{
-	//case 0:		// Ãû³Æ
+	//case 0:		// åç§°
 	//	iResult = 0;
 	//	break;
 
-	case 1:	// ±àºÅ
+	case 1:	// ç¼–å·
 		iResult = (INT)(lParam1 - lParam2);
 		break;
 
-	case 2:		// ÊôĞÔ
+	case 2:		// å±æ€§
 		iResult = pSkill1->bType - pSkill2->bType;
 		break;
 
-	case 3:		// ÍşÁ¦
+	case 3:		// å¨åŠ›
 		iResult = pSkill2->bPower - pSkill1->bPower;
 		break;
 
-	case 4:		// ÃüÖĞ
+	case 4:		// å‘½ä¸­
 		iResult = pSkill2->bAccuracy - pSkill1->bAccuracy;
 		break;
 
-	case 5:		// £Ğ£Ğ
+	case 5:		// ï¼°ï¼°
 		iResult = pSkill2->bPP - pSkill1->bPP;
 		break;
 
-	case 6:		// Ğ§¹û
+	case 6:		// æ•ˆæœ
 		iResult = pSkill1->bEffect - pSkill2->bEffect;
 		break;
 
-	case 7:		// ¼¸ÂÊ
+	case 7:		// å‡ ç‡
 		iResult = pSkill2->bEffectRatio - pSkill1->bEffectRatio;
 		break;
 
-	case 8:		// ¶ÔÏó
+	case 8:		// å¯¹è±¡
 		iResult = pSkill1->bTargetType - pSkill2->bTargetType;
 		break;
 
-	case 9:		// ÓÅÏÈ¶È
+	case 9:		// ä¼˜å…ˆåº¦
 		iResult = pSkill2->nPriority - pSkill1->nPriority;
 		break;
 
-	case 10:	// ½ü
+	case 10:	// è¿‘
 		iResult = (INT)((pSkill1->dwFlags & skl_melee) - (pSkill2->dwFlags & skl_melee));
 		break;
 
-	case 11:	// ÊØ
+	case 11:	// å®ˆ
 		iResult = (INT)((pSkill1->dwFlags & skl_protect) - (pSkill2->dwFlags & skl_protect));
 		break;
 
-	case 12:	// Ìæ
+	case 12:	// æ›¿
 		iResult = (INT)((pSkill1->dwFlags & skl_substitute) - (pSkill2->dwFlags & skl_substitute));
 		break;
 
@@ -295,15 +295,15 @@ INT CALLBACK CSkillDlg::SortSkills(LPARAM lParam1, LPARAM lParam2, LPARAM lParam
 		iResult = (INT)((pSkill1->dwFlags & skl_unk1) - (pSkill2->dwFlags & skl_unk1));
 		break;
 
-	case 15:	// Íõ
+	case 15:	// ç‹
 		iResult = (INT)((pSkill1->dwFlags & skl_kingsrock) - (pSkill2->dwFlags & skl_kingsrock));
 		break;
 
-	//case 16:	// Ğ§¹ûËµÃ÷
+	//case 16:	// æ•ˆæœè¯´æ˜
 	//	iResult = 0;
 	//	break;
 
-	//case 17:	// ÌØÊâËµÃ÷
+	//case 17:	// ç‰¹æ®Šè¯´æ˜
 	//	iResult = 0;
 	//	break;
 	}
@@ -334,16 +334,16 @@ void CSkillDlg::SetCurSkill(WORD wSkill)
 void CSkillDlg::OnHdnItemclickSklSkillList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMHEADER phdr = reinterpret_cast<LPNMHEADER>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	static SkillSortParam ssp = { 0, TRUE };
 	POSITION	pos;
 
 	if(!rom.m_bOpened ||
-		phdr->iItem == 0 ||		// Ãû³Æ
-		phdr->iItem == 16 ||	// Ğ§¹ûËµÃ÷
-		phdr->iItem == 17)		// ÌØÊâËµÃ÷
+		phdr->iItem == 0 ||		// åç§°
+		phdr->iItem == 16 ||	// æ•ˆæœè¯´æ˜
+		phdr->iItem == 17)		// ç‰¹æ®Šè¯´æ˜
 	{
 		return;
 	}
@@ -384,43 +384,43 @@ void CSkillDlg::SetSkill()
 
 	pSkill = rom.GetSkillListEntry(m_wCurSkill);
 
-	// ÊôĞÔ
+	// å±æ€§
 	m_ctrlTypeList.SetCurSel(pSkill->bType);
 
-	// ÍşÁ¦
+	// å¨åŠ›
 	szText.Format(_T("%lu"), (DWORD)(pSkill->bPower));
 	SetDlgItemText(IDC_SKL_POWER, szText);
 
-	// ÃüÖĞ
+	// å‘½ä¸­
 	szText.Format(_T("%lu"), (DWORD)(pSkill->bAccuracy));
 	SetDlgItemText(IDC_SKL_ACC, szText);
 
-	// £Ğ£Ğ
+	// ï¼°ï¼°
 	szText.Format(_T("%lu"), (DWORD)(pSkill->bPP));
 	SetDlgItemText(IDC_SKL_PP, szText);
 
-	// Ğ§¹û
+	// æ•ˆæœ
 	szText.Format(_T("0x%02lX"), (DWORD)(pSkill->bEffect));
 	SetDlgItemText(IDC_SKL_EFFECT, szText);
 
-	// ¼¸ÂÊ
+	// å‡ ç‡
 	szText.Format(_T("%lu"), (DWORD)(pSkill->bEffectRatio));
 	SetDlgItemText(IDC_SKL_EFFECT_RATIO, szText);
 
-	// ¶ÔÏó
+	// å¯¹è±¡
 	m_ctrlTargetList.SetCurSel(GetTargetTypeIndex(pSkill->bTargetType));
 
-	// ÓÅÏÈ¶È
+	// ä¼˜å…ˆåº¦
 	szText.Format(_T("%li"), (LONG)(pSkill->nPriority));
 	SetDlgItemText(IDC_SKL_PRIORITY, szText);
 
-	// ½ü
+	// è¿‘
 	CheckDlgButton(IDC_SKL_MELEE, (pSkill->dwFlags & skl_melee) ? BST_CHECKED : BST_UNCHECKED);
 
-	// ÊØ
+	// å®ˆ
 	CheckDlgButton(IDC_SKL_PROTECT, (pSkill->dwFlags & skl_protect) ? BST_CHECKED : BST_UNCHECKED);
 
-	// Ìæ
+	// æ›¿
 	CheckDlgButton(IDC_SKL_SUBSTITUTE, (pSkill->dwFlags & skl_substitute) ? BST_CHECKED : BST_UNCHECKED);
 
 	// ?0
@@ -429,10 +429,10 @@ void CSkillDlg::SetSkill()
 	// ?1
 	CheckDlgButton(IDC_SKL_UNK1, (pSkill->dwFlags & skl_unk1) ? BST_CHECKED : BST_UNCHECKED);
 
-	// Íõ
+	// ç‹
 	CheckDlgButton(IDC_SKL_KINGSROCK, (pSkill->dwFlags & skl_kingsrock) ? BST_CHECKED : BST_UNCHECKED);
 
-	// ËµÃ÷
+	// è¯´æ˜
 	SetSkillDesc();
 }
 
@@ -447,34 +447,34 @@ void CSkillDlg::GetSkill()
 
 	pSkill = rom.GetSkillListEntry(m_wCurSkill);
 
-	// ÊôĞÔ
+	// å±æ€§
 	bNum = m_ctrlTypeList.GetCurSel();
 	if(bNum < dwTypesCount)
 	{
 		pSkill->bType = bNum;
 	}
 
-	// ÍşÁ¦
+	// å¨åŠ›
 	GetDlgItemText(IDC_SKL_POWER, szText);
 	pSkill->bPower = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
-	// ÃüÖĞ
+	// å‘½ä¸­
 	GetDlgItemText(IDC_SKL_ACC, szText);
 	pSkill->bAccuracy = (BYTE)(min(_tcstoul(szText, 0, 0), 0x64));
 
-	// £Ğ£Ğ
+	// ï¼°ï¼°
 	GetDlgItemText(IDC_SKL_PP, szText);
 	pSkill->bPP = (BYTE)(min(_tcstoul(szText, 0, 0), 159));
 
-	// Ğ§¹û
+	// æ•ˆæœ
 	GetDlgItemText(IDC_SKL_EFFECT, szText);
 	pSkill->bEffect = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
-	// ¼¸ÂÊ
+	// å‡ ç‡
 	GetDlgItemText(IDC_SKL_EFFECT_RATIO, szText);
 	pSkill->bEffectRatio = (BYTE)(min(_tcstoul(szText, 0, 0), 0x64));
 
-	// ¶ÔÏó
+	// å¯¹è±¡
 	bNum = m_ctrlTargetList.GetCurSel();
 	if(bNum < dwSkillTargetTypesCount)
 	{
@@ -482,23 +482,23 @@ void CSkillDlg::GetSkill()
 		pSkill->bTargetType = bNum;
 	}
 
-	// ÓÅÏÈ¶È
+	// ä¼˜å…ˆåº¦
 	GetDlgItemText(IDC_SKL_PRIORITY, szText);
 	pSkill->nPriority = (CHAR)(max(min(_tcstol(szText, 0, 0), CHAR_MAX), CHAR_MIN));
 
-	// ½ü
+	// è¿‘
 	if(IsDlgButtonChecked(IDC_SKL_MELEE) == BST_CHECKED)
 		pSkill->dwFlags |= skl_melee;
 	else
 		pSkill->dwFlags &= ~skl_melee;
 
-	// ÊØ
+	// å®ˆ
 	if(IsDlgButtonChecked(IDC_SKL_PROTECT) == BST_CHECKED)
 		pSkill->dwFlags |= skl_protect;
 	else
 		pSkill->dwFlags &= ~skl_protect;
 
-	// Ìæ
+	// æ›¿
 	if(IsDlgButtonChecked(IDC_SKL_SUBSTITUTE) == BST_CHECKED)
 		pSkill->dwFlags |= skl_substitute;
 	else
@@ -516,7 +516,7 @@ void CSkillDlg::GetSkill()
 	else
 		pSkill->dwFlags &= ~skl_unk1;
 
-	// Íõ
+	// ç‹
 	if(IsDlgButtonChecked(IDC_SKL_KINGSROCK) == BST_CHECKED)
 		pSkill->dwFlags |= skl_kingsrock;
 	else
@@ -528,7 +528,7 @@ void CSkillDlg::GetSkill()
 void CSkillDlg::OnLvnItemchangedSklSkillList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	if((pNMLV->uNewState & (LVIS_SELECTED | LVIS_FOCUSED)) &&
@@ -553,7 +553,7 @@ void CSkillDlg::OnLvnItemchangedSklSkillList(NMHDR *pNMHDR, LRESULT *pResult)
 
 void CSkillDlg::OnBnClickedRefresh()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	if(!rom.ReadSkillList())
 	{
 		AfxMessageBox(IDS_ERR_ROM_READ);
@@ -567,7 +567,7 @@ void CSkillDlg::OnBnClickedRefresh()
 
 void CSkillDlg::OnBnClickedConfirm()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	GetSkill();
 
 	if(!rom.SaveSkillList())

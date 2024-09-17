@@ -1,11 +1,11 @@
-// BaseDialog.cpp : ÊµÏÖÎÄ¼ş
+// BaseDialog.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonRomViewer.h"
 #include "BaseDialog.h"
 
-// CBaseDialog ¶Ô»°¿ò
+// CBaseDialog å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CBaseDialog, CDialog)
 CBaseDialog::CBaseDialog()
@@ -26,12 +26,12 @@ BEGIN_MESSAGE_MAP(CBaseDialog, CDialog)
 END_MESSAGE_MAP()
 
 
-// CBaseDialog ÏûÏ¢´¦Àí³ÌĞò
+// CBaseDialog æ¶ˆæ¯å¤„ç†ç¨‹åº
 BOOL CBaseDialog::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯
+	// TODO:  åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–
 	HICON	hIcon;
 
 	if(GetWindowLongPtr(m_hWnd, GWL_STYLE) & WS_DLGFRAME)
@@ -42,7 +42,7 @@ BOOL CBaseDialog::OnInitDialog()
 	}
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CBaseDialog::OnOK()

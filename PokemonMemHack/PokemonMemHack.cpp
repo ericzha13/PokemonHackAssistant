@@ -1,4 +1,4 @@
-// PokemonMemHack.cpp : ¶¨ÒåÓ¦ÓÃ³ÌÐòµÄÀàÐÐÎª¡£
+// PokemonMemHack.cpp : å®šä¹‰åº”ç”¨ç¨‹åºçš„ç±»è¡Œä¸ºã€‚
 //
 
 #include "stdafx.h"
@@ -10,7 +10,7 @@
 #endif
 
 
-// Î¨Ò»µÄÒ»¸ö CPokemonMemHackApp ¶ÔÏó
+// å”¯ä¸€çš„ä¸€ä¸ª CPokemonMemHackApp å¯¹è±¡
 
 CPokemonMemHackApp	theApp;
 ConfigStruct		cfg;
@@ -19,46 +19,46 @@ CPokemonRom			g_MemRom;
 
 COLORREF	g_rgBackClrTable[] =
 {
-	RGB(168,168,120),	// 00¡¢¤Õ¤Ä¤¦
-	RGB(192,48,40),		// 01¡¢¤«¤¯¤È¤¦
-	RGB(168,144,240),	// 02¡¢¤Ò¤³¤¦
-	RGB(160,64,160),	// 03¡¢¤É¤¯
-	RGB(224,192,104),	// 04¡¢¤¸¤á¤ó
-	RGB(184,160,56),	// 05¡¢¤¤¤ï
-	RGB(168,184,32),	// 06¡¢¤à¤·
-	RGB(112,88,152),	// 07¡¢¥´©`¥¹¥È
-	RGB(184,184,208),	// 08¡¢¤Ï¤¬¤Í
-	RGB(104,160,144),	// 09¡¢£¿£¿£¿
-	RGB(240,128,48),	// 0A¡¢¤Û¤Î¤ª
-	RGB(104,144,240),	// 0B¡¢¤ß¤º
-	RGB(120,200,80),	// 0C¡¢¤¯¤µ
-	RGB(248,208,48),	// 0D¡¢¤Ç¤ó¤­
-	RGB(248,88,136),	// 0E¡¢¥¨¥¹¥Ñ©`
-	RGB(152,216,216),	// 0F¡¢¤³¤ª¤ê
-	RGB(112,56,248),	// 10¡¢¥É¥é¥´¥ó
-	RGB(112,88,112),	// 11¡¢¤¢¤¯
+	RGB(168,168,120),	// 00ã€ãµã¤ã†
+	RGB(192,48,40),		// 01ã€ã‹ãã¨ã†
+	RGB(168,144,240),	// 02ã€ã²ã“ã†
+	RGB(160,64,160),	// 03ã€ã©ã
+	RGB(224,192,104),	// 04ã€ã˜ã‚ã‚“
+	RGB(184,160,56),	// 05ã€ã„ã‚
+	RGB(168,184,32),	// 06ã€ã‚€ã—
+	RGB(112,88,152),	// 07ã€ã‚´`ã‚¹ãƒˆ
+	RGB(184,184,208),	// 08ã€ã¯ãŒã­
+	RGB(104,160,144),	// 09ã€ï¼Ÿï¼Ÿï¼Ÿ
+	RGB(240,128,48),	// 0Aã€ã»ã®ãŠ
+	RGB(104,144,240),	// 0Bã€ã¿ãš
+	RGB(120,200,80),	// 0Cã€ãã•
+	RGB(248,208,48),	// 0Dã€ã§ã‚“ã
+	RGB(248,88,136),	// 0Eã€ã‚¨ã‚¹ãƒ‘`
+	RGB(152,216,216),	// 0Fã€ã“ãŠã‚Š
+	RGB(112,56,248),	// 10ã€ãƒ‰ãƒ©ã‚´ãƒ³
+	RGB(112,88,112),	// 11ã€ã‚ã
 };
 
 COLORREF	g_rgForeClrTable[] =
 {
-	RGB(0,0,0),			// 00¡¢¤Õ¤Ä¤¦
-	RGB(255,255,255),	// 01¡¢¤«¤¯¤È¤¦
-	RGB(0,0,0),			// 02¡¢¤Ò¤³¤¦
-	RGB(255,255,255),	// 03¡¢¤É¤¯
-	RGB(0,0,0),			// 04¡¢¤¸¤á¤ó
-	RGB(0,0,0),			// 05¡¢¤¤¤ï
-	RGB(0,0,0),			// 06¡¢¤à¤·
-	RGB(255,255,255),	// 07¡¢¥´©`¥¹¥È
-	RGB(0,0,0),			// 08¡¢¤Ï¤¬¤Í
-	RGB(0,0,0),			// 09¡¢£¿£¿£¿
-	RGB(255,255,255),	// 0A¡¢¤Û¤Î¤ª
-	RGB(0,0,0),			// 0B¡¢¤ß¤º
-	RGB(0,0,0),			// 0C¡¢¤¯¤µ
-	RGB(0,0,0),			// 0D¡¢¤Ç¤ó¤­
-	RGB(255,255,255),	// 0E¡¢¥¨¥¹¥Ñ©`
-	RGB(0,0,0),			// 0F¡¢¤³¤ª¤ê
-	RGB(255,255,255),	// 10¡¢¥É¥é¥´¥ó
-	RGB(255,255,255),	// 11¡¢¤¢¤¯
+	RGB(0,0,0),			// 00ã€ãµã¤ã†
+	RGB(255,255,255),	// 01ã€ã‹ãã¨ã†
+	RGB(0,0,0),			// 02ã€ã²ã“ã†
+	RGB(255,255,255),	// 03ã€ã©ã
+	RGB(0,0,0),			// 04ã€ã˜ã‚ã‚“
+	RGB(0,0,0),			// 05ã€ã„ã‚
+	RGB(0,0,0),			// 06ã€ã‚€ã—
+	RGB(255,255,255),	// 07ã€ã‚´`ã‚¹ãƒˆ
+	RGB(0,0,0),			// 08ã€ã¯ãŒã­
+	RGB(0,0,0),			// 09ã€ï¼Ÿï¼Ÿï¼Ÿ
+	RGB(255,255,255),	// 0Aã€ã»ã®ãŠ
+	RGB(0,0,0),			// 0Bã€ã¿ãš
+	RGB(0,0,0),			// 0Cã€ãã•
+	RGB(0,0,0),			// 0Dã€ã§ã‚“ã
+	RGB(255,255,255),	// 0Eã€ã‚¨ã‚¹ãƒ‘`
+	RGB(0,0,0),			// 0Fã€ã“ãŠã‚Š
+	RGB(255,255,255),	// 10ã€ãƒ‰ãƒ©ã‚´ãƒ³
+	RGB(255,255,255),	// 11ã€ã‚ã
 };
 
 // CPokemonMemHackApp
@@ -68,11 +68,11 @@ BEGIN_MESSAGE_MAP(CPokemonMemHackApp, CWinApp)
 END_MESSAGE_MAP()
 
 
-// CPokemonMemHackApp ¹¹Ôì
+// CPokemonMemHackApp æž„é€ 
 
 CPokemonMemHackApp::CPokemonMemHackApp()
 {
-	// ½«ËùÓÐÖØÒªµÄ³õÊ¼»¯·ÅÖÃÔÚ InitInstance ÖÐ
+	// å°†æ‰€æœ‰é‡è¦çš„åˆå§‹åŒ–æ”¾ç½®åœ¨ InitInstance ä¸­
 #ifdef _DEBUG
 	cfg.dwLang = ui_lang_jp;
 #else
@@ -95,13 +95,13 @@ CPokemonMemHackApp::~CPokemonMemHackApp()
 	DestroyStringLists();
 }
 
-// CPokemonMemHackApp ³õÊ¼»¯
+// CPokemonMemHackApp åˆå§‹åŒ–
 
 BOOL CPokemonMemHackApp::InitInstance()
 {
-	// Èç¹ûÒ»¸öÔËÐÐÔÚ Windows XP ÉÏµÄÓ¦ÓÃ³ÌÐòÇåµ¥Ö¸¶¨Òª
-	// Ê¹ÓÃ ComCtl32.dll °æ±¾ 6 »ò¸ü¸ß°æ±¾À´ÆôÓÃ¿ÉÊÓ»¯·½Ê½£¬
-	//ÔòÐèÒª InitCommonControls()¡£·ñÔò£¬½«ÎÞ·¨´´½¨´°¿Ú¡£
+	// å¦‚æžœä¸€ä¸ªè¿è¡Œåœ¨ Windows XP ä¸Šçš„åº”ç”¨ç¨‹åºæ¸…å•æŒ‡å®šè¦
+	// ä½¿ç”¨ ComCtl32.dll ç‰ˆæœ¬ 6 æˆ–æ›´é«˜ç‰ˆæœ¬æ¥å¯ç”¨å¯è§†åŒ–æ–¹å¼ï¼Œ
+	//åˆ™éœ€è¦ InitCommonControls()ã€‚å¦åˆ™ï¼Œå°†æ— æ³•åˆ›å»ºçª—å£ã€‚
 	InitCommonControls();
 
 	CWinApp::InitInstance();
@@ -123,16 +123,16 @@ BOOL CPokemonMemHackApp::InitInstance()
 		INT_PTR nResponse = dlg.DoModal();
 		if (nResponse == IDOK)
 		{
-			//¶Ô»°¿òµÄ´úÂë
+			//å¯¹è¯æ¡†çš„ä»£ç 
 		}
 		else if (nResponse == IDCANCEL)
 		{
-			//¶Ô»°¿òµÄ´úÂë
+			//å¯¹è¯æ¡†çš„ä»£ç 
 		}
 	}
 
-	// ÓÉÓÚ¶Ô»°¿òÒÑ¹Ø±Õ£¬ËùÒÔ½«·µ»Ø FALSE ÒÔ±ãÍË³öÓ¦ÓÃ³ÌÐò£¬
-	// ¶ø²»ÊÇÆô¶¯Ó¦ÓÃ³ÌÐòµÄÏûÏ¢±Ã¡£
+	// ç”±äºŽå¯¹è¯æ¡†å·²å…³é—­ï¼Œæ‰€ä»¥å°†è¿”å›ž FALSE ä»¥ä¾¿é€€å‡ºåº”ç”¨ç¨‹åºï¼Œ
+	// è€Œä¸æ˜¯å¯åŠ¨åº”ç”¨ç¨‹åºçš„æ¶ˆæ¯æ³µã€‚
 	return FALSE;
 }
 

@@ -2,21 +2,21 @@
 #include "afxwin.h"
 
 
-// CItemDlg ¶Ô»°¿ò
+// CItemDlg å¯¹è¯æ¡†
 
 class CItemDlg : public CBaseDialog
 {
 	DECLARE_DYNAMIC(CItemDlg)
 
 public:
-	CItemDlg();   // ±ê×¼¹¹Ôìº¯Êı
+	CItemDlg();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CItemDlg();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
 
 	WORD	m_wCurItem;
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_ITEM };
 
 protected:
@@ -30,7 +30,7 @@ protected:
 	void GetPrice();
 	void SetDesc();
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	afx_msg void OnBnClickedRefresh();
 	afx_msg void OnBnClickedConfirm();
 	afx_msg void OnLbnSelchangeItmItemList();

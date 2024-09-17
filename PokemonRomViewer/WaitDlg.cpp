@@ -1,11 +1,11 @@
-// WaitDlg.cpp : ÊµÏÖÎÄ¼ş
+// WaitDlg.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonRomViewer.h"
 #include "WaitDlg.h"
 
-// CWaitDlg ¶Ô»°¿ò
+// CWaitDlg å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CWaitDlg, CDialog)
 CWaitDlg::CWaitDlg()
@@ -30,7 +30,7 @@ BEGIN_MESSAGE_MAP(CWaitDlg, CDialog)
 END_MESSAGE_MAP()
 
 
-// CWaitDlg ÏûÏ¢´¦Àí³ÌĞò
+// CWaitDlg æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 void CWaitDlg::OnOK()
 {
@@ -42,7 +42,7 @@ void CWaitDlg::OnCancel()
 
 void CWaitDlg::OnTimer(UINT nIDEvent)
 {
-	// TODO: ÔÚ´ËÌí¼ÓÏûÏ¢´¦Àí³ÌĞò´úÂëºÍ/»òµ÷ÓÃÄ¬ÈÏÖµ
+	// TODO: åœ¨æ­¤æ·»åŠ æ¶ˆæ¯å¤„ç†ç¨‹åºä»£ç å’Œ/æˆ–è°ƒç”¨é»˜è®¤å€¼
 	if(nIDEvent == m_uTimer)
 	{
 		KillTimer(nIDEvent);

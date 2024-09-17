@@ -1,11 +1,11 @@
-// EncDlg.cpp : ÊµÏÖÎÄ¼ş
+// EncDlg.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonRomViewer.h"
 #include "EncDlg.h"
 
-// CEncDlg ¶Ô»°¿ò
+// CEncDlg å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CEncDlg, CBaseDialog)
 CEncDlg::CEncDlg()
@@ -18,16 +18,16 @@ CEncDlg::CEncDlg()
 	m_dwCurPage = -1;
 	m_bFindEditChanged = FALSE;
 
-	m_pageLand.m_szPageName = _T("Â½ÉÏ");
+	m_pageLand.m_szPageName = _T("é™†ä¸Š");
 	m_rgpPages[0] = &m_pageLand;
 
-	m_pageWater.m_szPageName = _T("Ë®ÉÏ");
+	m_pageWater.m_szPageName = _T("æ°´ä¸Š");
 	m_rgpPages[1] = &m_pageWater;
 
-	m_pageStone.m_szPageName = _T("ËéÑÒ");
+	m_pageStone.m_szPageName = _T("ç¢å²©");
 	m_rgpPages[2] = &m_pageStone;
 
-	m_pageFish.m_szPageName = _T("´¹µö");
+	m_pageFish.m_szPageName = _T("å‚é’“");
 	m_rgpPages[3] = &m_pageFish;
 }
 
@@ -55,7 +55,7 @@ BEGIN_MESSAGE_MAP(CEncDlg, CBaseDialog)
 END_MESSAGE_MAP()
 
 
-// CEncDlg ÏûÏ¢´¦Àí³ÌĞò
+// CEncDlg æ¶ˆæ¯å¤„ç†ç¨‹åº
 INT CALLBACK CEncDlg::EncListSortFunc(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort)
 {
 	INT		iResult = 0;
@@ -247,7 +247,7 @@ BOOL CEncDlg::OnInitDialog()
 {
 	CBaseDialog::OnInitDialog();
 
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯
+	// TODO:  åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–
 	DWORD	dwIndex;
 	RECT	rect;
 
@@ -267,12 +267,12 @@ BOOL CEncDlg::OnInitDialog()
 		m_rgpPages[dwIndex]->MoveWindow(&rect);
 	}
 
-	m_ctrlEncList.InsertColumn(0, _T("±àºÅ"), LVCFMT_LEFT, 50, 0);
-	m_ctrlEncList.InsertColumn(1, _T("µØÇøÃû³Æ"), LVCFMT_LEFT, 200, 1);
+	m_ctrlEncList.InsertColumn(0, _T("ç¼–å·"), LVCFMT_LEFT, 50, 0);
+	m_ctrlEncList.InsertColumn(1, _T("åœ°åŒºåç§°"), LVCFMT_LEFT, 200, 1);
 	m_ctrlEncList.SetExtendedStyle(LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES | LVS_EX_HEADERDRAGDROP | LVS_EX_LABELTIP);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CEncDlg::ShowTabPage(DWORD dwIndex)
@@ -344,7 +344,7 @@ void CEncDlg::SetTabPageNames()
 		}
 		else
 		{
-			tci.pszText = _T("Ã»ÓĞ");
+			tci.pszText = _T("æ²¡æœ‰");
 		}
 
 		m_ctrlTab.SetItem(dwIndex, &tci);
@@ -359,7 +359,7 @@ void CEncDlg::SetTabPageNames()
 void CEncDlg::OnLvnItemchangedEncList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	if(!rom.m_bOpened)
@@ -391,7 +391,7 @@ void CEncDlg::OnLvnItemchangedEncList(NMHDR *pNMHDR, LRESULT *pResult)
 
 void CEncDlg::OnBnClickedRefresh()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	if(!rom.ReadEncList())
 	{
 		AfxMessageBox(IDS_ERR_ROM_READ);
@@ -404,7 +404,7 @@ void CEncDlg::OnBnClickedRefresh()
 
 void CEncDlg::OnBnClickedConfirm()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	TransData(FALSE);
 
 	if(!rom.SaveEncList())
@@ -415,7 +415,7 @@ void CEncDlg::OnBnClickedConfirm()
 
 void CEncDlg::OnTcnSelchangeTab(NMHDR *pNMHDR, LRESULT *pResult)
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	ShowTabPage(m_ctrlTab.GetCurSel());
@@ -424,11 +424,11 @@ void CEncDlg::OnTcnSelchangeTab(NMHDR *pNMHDR, LRESULT *pResult)
 void CEncDlg::OnHdnItemclickEncList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMHEADER phdr = reinterpret_cast<LPNMHEADER>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	if(!rom.m_bOpened ||
-		phdr->iItem == 1)	// µØÇøÃû³Æ
+		phdr->iItem == 1)	// åœ°åŒºåç§°
 		return;
 
 	m_dwSortOrder = (m_dwSortOrder + 1) & 1;
@@ -489,13 +489,13 @@ BOOL CEncDlg::FindBreedInEnc(WORD wBreed, DWORD dwEncIndex, DWORD &dwEncType, DW
 
 void CEncDlg::OnEnChangeEncFindEdit()
 {
-	// TODO:  ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO:  åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	m_bFindEditChanged = TRUE;
 }
 
 void CEncDlg::OnBnClickedEncFind()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	static WORD wBreed = 0;
 	DWORD	dwItemCount, dwItemIndex;
 	DWORD	dwEncIndex, dwPageIndex, dwEncEntryCount, dwEncEntryIndex;
@@ -538,5 +538,5 @@ void CEncDlg::OnBnClickedEncFind()
 		dwEncEntryIndex = 0;
 	}
 	if(dwItemIndex >= dwItemCount)
-		MessageBox(_T("ËÑË÷Íê±Ï£¡"), _T("²éÕÒ"), MB_OK | MB_ICONINFORMATION);
+		MessageBox(_T("æœç´¢å®Œæ¯•ï¼"), _T("æŸ¥æ‰¾"), MB_OK | MB_ICONINFORMATION);
 }

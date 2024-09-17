@@ -1,13 +1,13 @@
 #pragma once
 
-// CSkillDlg ¶Ô»°¿ò
+// CSkillDlg å¯¹è¯æ¡†
 
 class CSkillDlg : public CBaseDialog
 {
 	DECLARE_DYNAMIC(CSkillDlg)
 
 public:
-	CSkillDlg();   // ±ê×¼¹¹Ôìº¯Êı
+	CSkillDlg();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CSkillDlg();
 
 	WORD	m_wCurSel;
@@ -16,7 +16,7 @@ public:
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
 	void SetCurSkill(WORD wSkill);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_SKILL };
 
 protected:
@@ -33,7 +33,7 @@ protected:
 	void GetSkill();
 	void SetSkillDesc();
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnHdnItemclickSklSkillList(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnLvnItemchangedSklSkillList(NMHDR *pNMHDR, LRESULT *pResult);

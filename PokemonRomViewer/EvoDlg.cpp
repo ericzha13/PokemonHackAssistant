@@ -1,4 +1,4 @@
-// EvoDlg.cpp : ÊµÏÖÎÄ¼ş
+// EvoDlg.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "EvoDlg.h"
 #include ".\evodlg.h"
 
-// CEvoDlg ¶Ô»°¿ò
+// CEvoDlg å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CEvoDlg, CBaseDialog)
 CEvoDlg::CEvoDlg()
@@ -57,7 +57,7 @@ BEGIN_MESSAGE_MAP(CEvoDlg, CBaseDialog)
 END_MESSAGE_MAP()
 
 
-// CEvoDlg ÏûÏ¢´¦Àí³ÌĞò
+// CEvoDlg æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CEvoDlg::GetCurrentEvo()
 {
 	if(!rom.m_bOpened || m_wCurBreed >= BREED_COUNT)
@@ -254,7 +254,7 @@ void CEvoDlg::SetItemList()
 
 void CEvoDlg::OnBnClickedRefresh()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	if(!rom.ReadEvoList())
 	{
 		AfxMessageBox(IDS_ERR_ROM_READ);
@@ -266,7 +266,7 @@ void CEvoDlg::OnBnClickedRefresh()
 
 void CEvoDlg::OnBnClickedConfirm()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	GetAllParams();
 
 	if(!rom.SaveEvoList())
@@ -279,7 +279,7 @@ void CEvoDlg::OnBnClickedConfirm()
 void CEvoDlg::OnLvnItemchangedPmList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	if(pNMLV->uNewState & (LVIS_SELECTED | LVIS_FOCUSED))
@@ -303,14 +303,14 @@ BOOL CEvoDlg::OnInitDialog()
 {
 	CBaseDialog::OnInitDialog();
 
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯
+	// TODO:  åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–
 	m_ctrlPmList.SetIconSpacing(SMALL_ICON_BIT_WIDTH2 + 28, SMALL_ICON_BIT_HEIGHT2 + 24);
 	m_ctrlPmList.SetExtendedStyle(LVS_EX_BORDERSELECT | LVS_EX_INFOTIP);
 
 	CheckDlgButton(IDC_ORDER_INTERNAL + m_dwCurOrder, BST_CHECKED);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CEvoDlg::GetParam(DWORD dwIndex)
@@ -489,7 +489,7 @@ BOOL CEvoDlg::GetBreed(DWORD dwIndex)
 
 void CEvoDlg::OnCbnSelchangeEvoBrdList(UINT uID)
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	if(GetBreed(uID - IDC_EVO_BRD_LIST0))
 		SetBreedIcon(uID - IDC_EVO_BRD_LIST0);
 }
@@ -507,7 +507,7 @@ void CEvoDlg::OnCondChanged(DWORD dwIndex)
 
 void CEvoDlg::OnCbnSelchangeEvoCondList(UINT uID)
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	OnCondChanged(uID - IDC_EVO_COND_LIST0);
 }
 
@@ -525,14 +525,14 @@ void CEvoDlg::OnSetBreed(DWORD dwIndex)
 
 void CEvoDlg::OnBnClickedEvoSetBrd(UINT uID)
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	OnSetBreed(uID - IDC_EVO_SET_BRD0);
 }
 
 void CEvoDlg::OnLvnGetInfoTipPmList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMLVGETINFOTIP pGetInfoTip = reinterpret_cast<LPNMLVGETINFOTIP>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	WORD	wBreed;
@@ -570,7 +570,7 @@ void CEvoDlg::OnLvnGetInfoTipPmList(NMHDR *pNMHDR, LRESULT *pResult)
 
 void CEvoDlg::OnBnClickedFromBrd()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	WORD	wBreed = theApp.m_dlgBreed.m_wCurBreed;
 	if(wBreed < BREED_COUNT)
 	{
@@ -580,7 +580,7 @@ void CEvoDlg::OnBnClickedFromBrd()
 
 void CEvoDlg::OnBnClickedReverseFind()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	BYTE	bEvoIndex;
 	WORD	wBreed;
 	EvoListEntry *pEvo = NULL;

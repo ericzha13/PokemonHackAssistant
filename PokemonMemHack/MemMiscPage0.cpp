@@ -1,11 +1,11 @@
-// MemMiscPage.cpp : ÊµÏÖÎÄ¼ş
+// MemMiscPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonMemHack.h"
 #include "MemMiscPage0.h"
 
-// CMemMiscPage0 ¶Ô»°¿ò
+// CMemMiscPage0 å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CMemMiscPage0, CPropertyPage)
 CMemMiscPage0::CMemMiscPage0()
@@ -32,7 +32,7 @@ BEGIN_MESSAGE_MAP(CMemMiscPage0, CPropertyPage)
 END_MESSAGE_MAP()
 
 
-// CMemMiscPage0 ÏûÏ¢´¦Àí³ÌĞò
+// CMemMiscPage0 æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CMemMiscPage0::OnChangeUILang(VOID)
 {
 }

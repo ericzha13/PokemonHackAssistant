@@ -1,14 +1,14 @@
 #pragma once
 
 
-// CEncTabPage ¶Ô»°¿ò
+// CEncTabPage å¯¹è¯æ¡†
 
 class CEncTabPage : public CBaseDialog
 {
 	DECLARE_DYNAMIC(CEncTabPage)
 
 public:
-	CEncTabPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CEncTabPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CEncTabPage();
 
 	LPCTSTR	m_szPageName;
@@ -17,7 +17,7 @@ public:
 	virtual void TransData(BOOL bToControls) = 0;
 	virtual void SetFocusedEntry(DWORD dwEncEntryIndex) = 0;
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 
 protected:
 	EncLandList *	m_pLandList;
@@ -28,7 +28,7 @@ protected:
 
 	void GetCurrentEncLists();
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual void OnCancel();
 	DECLARE_MESSAGE_MAP()
 };

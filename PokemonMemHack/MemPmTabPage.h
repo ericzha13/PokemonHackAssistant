@@ -1,14 +1,14 @@
 #pragma once
 
 
-// CMemPmTabPage ¶Ô»°¿ò
+// CMemPmTabPage å¯¹è¯æ¡†
 
 class CMemPmTabPage : public CDialog
 {
 	DECLARE_DYNAMIC(CMemPmTabPage)
 
 public:
-	CMemPmTabPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CMemPmTabPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CMemPmTabPage();
 
 	UINT	m_uTemplateId;
@@ -17,13 +17,13 @@ public:
 	virtual void TransData(BOOL bToControls) = 0;
 	virtual void OnChangeUILang(VOID) = 0;
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 
 protected:
 	virtual CPokemonCodec * GetPokemonCodec(VOID);
 	virtual PokemonStructActive * GetPokemonStructActive(VOID);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual void OnOK();
 	virtual void OnCancel();
 	DECLARE_MESSAGE_MAP()

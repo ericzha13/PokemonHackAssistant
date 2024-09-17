@@ -1,11 +1,11 @@
-// BreedSpecPage.cpp : ÊµÏÖÎÄ¼ş
+// BreedSpecPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonRomViewer.h"
 #include "BreedSpecPage.h"
 
-// CBreedSpecPage ¶Ô»°¿ò
+// CBreedSpecPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CBreedSpecPage, CBreedTabPage)
 CBreedSpecPage::CBreedSpecPage()
@@ -32,7 +32,7 @@ BEGIN_MESSAGE_MAP(CBreedSpecPage, CBreedTabPage)
 END_MESSAGE_MAP()
 
 
-// CBreedSpecPage ÏûÏ¢´¦Àí³ÌĞò
+// CBreedSpecPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CBreedSpecPage::SetSpecDesc(DWORD dwIndex)
 {
 	if(dwIndex >= 2)
@@ -171,12 +171,12 @@ void CBreedSpecPage::TransData(BOOL bToControls)
 
 void CBreedSpecPage::OnCbnSelchangeBrdSpecList0()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	SetSpecDesc(0);
 }
 
 void CBreedSpecPage::OnCbnSelchangeBrdSpecList1()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	SetSpecDesc(1);
 }

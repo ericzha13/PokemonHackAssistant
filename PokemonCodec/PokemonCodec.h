@@ -24,15 +24,15 @@ BYTE	GetSex(DWORD dwChar, BYTE bFemaleRatio);
 // note:
 // bBadEgg: bit flags, usually '02', or '07' for bad eggs
 // bit1: if this bit is not set, daycare center will not increase this pokemon's step counter, so it cannot gain exp or make egg
-// bit0 & bit2: if both bits are set, the pokemon is a bag egg(¤À¤á¥¿¥Ş¥´), and the bIsEgg bit in PokemonStructInnateInfo should be set
+// bit0 & bit2: if both bits are set, the pokemon is a bag egg(ã ã‚ã‚¿ãƒã‚´), and the bIsEgg bit in PokemonStructInnateInfo should be set
 struct PokemonStructHeader
 {
-	DWORD	dwChar;					// @00, ĞÔ¸ñ‚
-	DWORD	dwID;					// @04, ¥È¥ì©`¥Ê¤Î£É£Ä
-	BYTE	bNickName[10];			// @08, ¥Ë¥Ã¥¯¥Í©`¥à
+	DWORD	dwChar;					// @00, æ€§æ ¼
+	DWORD	dwID;					// @04, ãƒˆãƒ¬`ãƒŠã®ï¼©ï¼¤
+	BYTE	bNickName[10];			// @08, ãƒ‹ãƒƒã‚¯ãƒ`ãƒ 
 	BYTE	bNickNameLanguage;		// @12, '01' = 6 bytes (jp), '02' = 10 bytes (en)
-	BYTE	bBadEgg;				// @12, '02' for daycare-center-enabled, '07' for ¥À¥á¥¿¥Ş¥´
-	BYTE	bCatcherName[7];		// @14, ¥È¥ì©`¥Ê¤ÎÃûÇ°
+	BYTE	bBadEgg;				// @12, '02' for daycare-center-enabled, '07' for ãƒ€ãƒ¡ã‚¿ãƒã‚´
+	BYTE	bCatcherName[7];		// @14, ãƒˆãƒ¬`ãƒŠã®åå‰
 	BYTE	bMarkings;				// @1B, only the lowest 4 bits are used
 	WORD	wChecksum;				// @1C, Checksum
 	BYTE	unk0[0x02];				// @1E, '00 00'
@@ -40,14 +40,14 @@ struct PokemonStructHeader
 
 struct PokemonStructBreedInfo
 {
-	WORD	wBreed		: 16;	// @0x00, ¥İ¥±¥â¥ó¤Î·N×å¤Î£É£Ä
-	WORD	wItem		: 16;	// @0x10, ³Ö¤ÁÎï
-	DWORD	dwExp		: 32;	// @0x20, ½UòY‚
-	BYTE	bPointUp0	: 2;	// @0x40, ¤ï¤¶¤Î×î´ó‚¤¬‰ˆ¤¨¤¿‚¡£increase by # * 20% of the base value
+	WORD	wBreed		: 16;	// @0x00, ãƒã‚±ãƒ¢ãƒ³ã®Næ—ã®ï¼©ï¼¤
+	WORD	wItem		: 16;	// @0x10, æŒã¡ç‰©
+	DWORD	dwExp		: 32;	// @0x20, UY
+	BYTE	bPointUp0	: 2;	// @0x40, ã‚ã–ã®æœ€å¤§ãŒãˆãŸã€‚increase by # * 20% of the base value
 	BYTE	bPointUp1	: 2;	// @0x42,
 	BYTE	bPointUp2	: 2;	// @0x44,
 	BYTE	bPointUp3	: 2;	// @0x46,
-	BYTE	bIntimate	: 8;	// @0x48, ‘¯¤­¶È
+	BYTE	bIntimate	: 8;	// @0x48, ãåº¦
 	WORD	unk0		: 16;	// @0x50, '00 00'
 };
 
@@ -59,35 +59,35 @@ struct PokemonStructSkillInfo
 
 struct PokemonStructAcquiredInfo
 {
-	BYTE	rgbBattleBonuses[0x06];	// Å¬Á¦‚£¨£È£Ğ¡¢¹¥“Ä¡¢·ÀÓù¡¢ËØÔç¤µ¡¢ÌØ¹¥¡¢ÌØ·À£©
-	BYTE	rgbApealPoints[0x06];	// ¥³¥ó¥Ç¥£¥·¥ç¥ó£¨¸ñºÃÁ¼¤µ¡¢ÃÀ¤·¤µ¡¢¿ÉÛ¤µ¡¢Ùt¤µ¡¢³Ñ¤·¤µ¡¢»¬¤é¤«¤µ£©
+	BYTE	rgbBattleBonuses[0x06];	// åŠªåŠ›ï¼ˆï¼¨ï¼°ã€æ”»æ‘¹â’çƒ™ã€ç´ æ—©ã•ã€ç‰¹æ”»ã€ç‰¹é˜²ï¼‰
+	BYTE	rgbApealPoints[0x06];	// ã‚³ãƒ³ãƒ‡ã‚£ã‚·ãƒ§ãƒ³ï¼ˆæ ¼å¥½è‰¯ã•ã€ç¾ã—ã•ã€å¯éƒ…æ€ â‘ tã•ã€é€ã—ã•ã€æ»‘ã‚‰ã‹ã•ï¼‰
 };
 
 struct PokemonStructInnateInfo
 {
-	DWORD	bPokeVirus	: 4;	// @0x00, if any bit is set, ¥İ¥±¥ë¥¹¤¬¤«¤«¤ë
-	DWORD	bBlackPoint	: 4;	// @0x04, if any bit is set, ü\¤¤µã¤¬¤Ä¤­
+	DWORD	bPokeVirus	: 4;	// @0x00, if any bit is set, ãƒã‚±ãƒ«ã‚¹ãŒã‹ã‹ã‚‹
+	DWORD	bBlackPoint	: 4;	// @0x04, if any bit is set, \ã„ç‚¹ãŒã¤ã
 	DWORD	bCatchPlace	: 8;	// @0x08, where the Pokemon was caught
 	DWORD	bCatchLevel	: 7;	// @0x10, the Pokemon's level when it was caught
 	DWORD	bGameVersion: 4;	// @0x17, game version (sapphire=1, ruby=2, emerald=3, fire=4, leaf=5)
 	DWORD	bPokeBall	: 4;	// @0x1B, Poke-Ball type (Write twice, why?)
 	DWORD	unk1		: 1;	// @0x1F, 0
-	DWORD	bHPIndv		: 5;	// @0x20, £È£Ğ  (‚€Ìå‚)
-	DWORD	bAtkIndv	: 5;	// @0x25, ¹¥“Ä  (‚€Ìå‚)
-	DWORD	bDefIndv	: 5;	// @0x2A, ·ÀÓù  (‚€Ìå‚)
-	DWORD	bDexIndv	: 5;	// @0x2F, ËØÔç¤µ(‚€Ìå‚)
-	DWORD	bSAtkIndv	: 5;	// @0x34, ÌØ¹¥  (‚€Ìå‚)
-	DWORD	bSDefIndv	: 5;	// @0x39, ÌØ·À  (‚€Ìå‚)
-	DWORD	bIsEgg		: 1;	// @0x3E, ¥¿¥Ş¥´
-	DWORD	bSpecialty	: 1;	// @0x3F, ÌØĞÔ (0: the 1st, 1: the 2nd)
-	DWORD	bRibbon0	: 3;	// @0x40, # of ¥ê¥Ü¥ó (0 - 4) ¤«¤Ã¤³¤è¤µ£º¥Î©`¥Ş¥ë¡¢¥¹©`¥Ñ©`¡¢¥Ï¥¤¥Ñ©`¡¢¥Ş¥¹¥¿©`
-	DWORD	bRibbon1	: 3;	// @0x43, # of ¥ê¥Ü¥ó (0 - 4) ¤¦¤Ä¤¯¤·¤µ£º¥Î©`¥Ş¥ë¡¢¥¹©`¥Ñ©`¡¢¥Ï¥¤¥Ñ©`¡¢¥Ş¥¹¥¿©`
-	DWORD	bRibbon2	: 3;	// @0x46, # of ¥ê¥Ü¥ó (0 - 4) ¤«¤ï¤¤¤µ£º¥Î©`¥Ş¥ë¡¢¥¹©`¥Ñ©`¡¢¥Ï¥¤¥Ñ©`¡¢¥Ş¥¹¥¿©`
-	DWORD	bRibbon3	: 3;	// @0x49, # of ¥ê¥Ü¥ó (0 - 4) ¤«¤·¤³¤µ£º¥Î©`¥Ş¥ë¡¢¥¹©`¥Ñ©`¡¢¥Ï¥¤¥Ñ©`¡¢¥Ş¥¹¥¿©`
-	DWORD	bRibbon4	: 3;	// @0x4C, # of ¥ê¥Ü¥ó (0 - 4) ¤¿¤¯¤Ş¤·¤µ£º¥Î©`¥Ş¥ë¡¢¥¹©`¥Ñ©`¡¢¥Ï¥¤¥Ñ©`¡¢¥Ş¥¹¥¿©`
-	DWORD	bRibbon5	: 12;	// @0x4F, # of ¥ê¥Ü¥ó (0 - 1) x 12 (bit0-4: ok, bit5-11: reserved)
+	DWORD	bHPIndv		: 5;	// @0x20, ï¼¨ï¼°  (ä½“)
+	DWORD	bAtkIndv	: 5;	// @0x25, æ”»  (ä½“)
+	DWORD	bDefIndv	: 5;	// @0x2A, é˜²å¾¡  (ä½“)
+	DWORD	bDexIndv	: 5;	// @0x2F, ç´ æ—©ã•(ä½“)
+	DWORD	bSAtkIndv	: 5;	// @0x34, ç‰¹æ”»  (ä½“)
+	DWORD	bSDefIndv	: 5;	// @0x39, ç‰¹é˜²  (ä½“)
+	DWORD	bIsEgg		: 1;	// @0x3E, ã‚¿ãƒã‚´
+	DWORD	bSpecialty	: 1;	// @0x3F, ç‰¹æ€§ (0: the 1st, 1: the 2nd)
+	DWORD	bRibbon0	: 3;	// @0x40, # of ãƒªãƒœãƒ³ (0 - 4) ã‹ã£ã“ã‚ˆã•ï¼šãƒ`ãƒãƒ«ã€ã‚¹`ãƒ‘`ã€ãƒã‚¤ãƒ‘`ã€ãƒã‚¹ã‚¿`
+	DWORD	bRibbon1	: 3;	// @0x43, # of ãƒªãƒœãƒ³ (0 - 4) ã†ã¤ãã—ã•ï¼šãƒ`ãƒãƒ«ã€ã‚¹`ãƒ‘`ã€ãƒã‚¤ãƒ‘`ã€ãƒã‚¹ã‚¿`
+	DWORD	bRibbon2	: 3;	// @0x46, # of ãƒªãƒœãƒ³ (0 - 4) ã‹ã‚ã„ã•ï¼šãƒ`ãƒãƒ«ã€ã‚¹`ãƒ‘`ã€ãƒã‚¤ãƒ‘`ã€ãƒã‚¹ã‚¿`
+	DWORD	bRibbon3	: 3;	// @0x49, # of ãƒªãƒœãƒ³ (0 - 4) ã‹ã—ã“ã•ï¼šãƒ`ãƒãƒ«ã€ã‚¹`ãƒ‘`ã€ãƒã‚¤ãƒ‘`ã€ãƒã‚¹ã‚¿`
+	DWORD	bRibbon4	: 3;	// @0x4C, # of ãƒªãƒœãƒ³ (0 - 4) ãŸãã¾ã—ã•ï¼šãƒ`ãƒãƒ«ã€ã‚¹`ãƒ‘`ã€ãƒã‚¤ãƒ‘`ã€ãƒã‚¹ã‚¿`
+	DWORD	bRibbon5	: 12;	// @0x4F, # of ãƒªãƒœãƒ³ (0 - 1) x 12 (bit0-4: ok, bit5-11: reserved)
 	DWORD	unk2		: 4;	// @0x5B, 0
-	DWORD	bObedience	: 1;	// @0x5F, »Ã¤Î¥İ¥±¥â¥ó¤ÏÃüÁî¤òÂ„¤¯
+	DWORD	bObedience	: 1;	// @0x5F, å¹»ã®ãƒã‚±ãƒ¢ãƒ³ã¯å‘½ä»¤ã‚’ã
 };
 
 union PokemonStructInfo
@@ -106,7 +106,7 @@ struct PokemonStruct
 
 struct PokemonStructRear	// only for active (in group) pokemons
 {
-	BYTE	bStatus;	// bit0-2:¤Í¤à¤ê¤Î»ØÊı, bit3:¤É¤¯; bit4:¤ä¤±¤É, bit5:¤³¤ª¤ê, bit6:¤Ş¤Ò, bit7:¤â¤¦¤É¤¯
+	BYTE	bStatus;	// bit0-2:ã­ã‚€ã‚Šã®å›æ•°, bit3:ã©ã; bit4:ã‚„ã‘ã©, bit5:ã“ãŠã‚Š, bit6:ã¾ã², bit7:ã‚‚ã†ã©ã
 	BYTE	unk0[3];
 	BYTE	bLevel;
 	BYTE	unk1;		// this is always 'FF'

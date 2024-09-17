@@ -1,4 +1,4 @@
-// PokemonRomViewer.cpp : ¶¨ÒåÓ¦ÓÃ³ÌÐòµÄÀàÐÐÎª¡£
+// PokemonRomViewer.cpp : å®šä¹‰åº”ç”¨ç¨‹åºçš„ç±»è¡Œä¸ºã€‚
 //
 
 #include "stdafx.h"
@@ -135,52 +135,52 @@ VOID FormatSkillDesc(WORD wSkill, CString &szDesc)
 	if(pSkill)
 	{
 		// type
-		szTemp.Format(_T("ÊôÐÔ£º%s"), szTypes[pSkill->bType]);
+		szTemp.Format(_T("å±žæ€§ï¼š%s"), szTypes[pSkill->bType]);
 		szDesc = szDesc + szTemp;
 
 		// target
 		dwTargetTypeIndex = GetTargetTypeIndex(pSkill->bTargetType);
 		if(dwTargetTypeIndex < dwSkillTargetTypesCount)
-			szTemp.Format(_T("¶ÔÏó£º%s"), rgSkillTargetTypes[dwTargetTypeIndex].szName);
+			szTemp.Format(_T("å¯¹è±¡ï¼š%s"), rgSkillTargetTypes[dwTargetTypeIndex].szName);
 		else
-			szTemp.Format(_T("¶ÔÏó£º£¿£¿£¿"));
+			szTemp.Format(_T("å¯¹è±¡ï¼šï¼Ÿï¼Ÿï¼Ÿ"));
 		szDesc = szDesc + _T("\r\n") + szTemp;
 
 		// power
 		if(pSkill->bPower > 1)
-			szTemp.Format(_T("ÍþÁ¦£º%lu"), pSkill->bPower);
+			szTemp.Format(_T("å¨åŠ›ï¼š%lu"), pSkill->bPower);
 		else
-			szTemp.Format(_T("ÍþÁ¦£º"));
+			szTemp.Format(_T("å¨åŠ›ï¼š"));
 		szDesc = szDesc + _T("\r\n") + szTemp;
 
 		// acc
 		if(pSkill->bAccuracy > 0)
-			szTemp.Format(_T("ÃüÖÐ£º%lu%%"), pSkill->bAccuracy);
+			szTemp.Format(_T("å‘½ä¸­ï¼š%lu%%"), pSkill->bAccuracy);
 		else
-			szTemp.Format(_T("ÃüÖÐ£º±ØÖÐ"));
+			szTemp.Format(_T("å‘½ä¸­ï¼šå¿…ä¸­"));
 		szDesc = szDesc + _T("\r\n") + szTemp;
 
 		// pp
-		szTemp.Format(_T("£Ð£Ð£º%lu"), pSkill->bPP);
+		szTemp.Format(_T("ï¼°ï¼°ï¼š%lu"), pSkill->bPP);
 		szDesc = szDesc + _T("\r\n") + szTemp;
 
 		// priority
-		szTemp.Format(_T("ÓÅÏÈ£º%li"), (LONG)(pSkill->nPriority));
+		szTemp.Format(_T("ä¼˜å…ˆï¼š%li"), (LONG)(pSkill->nPriority));
 		szDesc = szDesc + _T("\r\n") + szTemp;
 
 		// effect ratio
 		if(pSkill->bPower > 1)
-			szTemp.Format(_T("Ð§¹û¼¸ÂÊ£º%lu%%"), pSkill->bEffectRatio);
+			szTemp.Format(_T("æ•ˆæžœå‡ çŽ‡ï¼š%lu%%"), pSkill->bEffectRatio);
 		else
-			szTemp.Format(_T("Ð§¹û¼¸ÂÊ£º±ØÈ»·¢¶¯"));
+			szTemp.Format(_T("æ•ˆæžœå‡ çŽ‡ï¼šå¿…ç„¶å‘åŠ¨"));
 		szDesc = szDesc + _T("\r\n") + szTemp;
 
 		// effect
-		szTemp.Format(_T("Ð§¹û£º%s"), cfg.pSkillEffList[pSkill->bEffect].rgszText[cfg.dwLang]);
+		szTemp.Format(_T("æ•ˆæžœï¼š%s"), cfg.pSkillEffList[pSkill->bEffect].rgszText[cfg.dwLang]);
 		szDesc = szDesc + _T("\r\n") + szTemp;
 
 		// special
-		szTemp.Format(_T("\nÌØÊâ£º%s"), cfg.pSkillSpecList[wSkill].rgszText[cfg.dwLang]);
+		szTemp.Format(_T("\nç‰¹æ®Šï¼š%s"), cfg.pSkillSpecList[wSkill].rgszText[cfg.dwLang]);
 		szDesc = szDesc + _T("\r\n") + szTemp;
 	}
 }
@@ -221,7 +221,7 @@ BEGIN_MESSAGE_MAP(CPokemonRomViewerApp, CWinApp)
 END_MESSAGE_MAP()
 
 
-// CPokemonRomViewerApp ¹¹Ôì
+// CPokemonRomViewerApp æž„é€ 
 
 CPokemonRomViewerApp::CPokemonRomViewerApp()
 {
@@ -255,7 +255,7 @@ CPokemonRomViewerApp::~CPokemonRomViewerApp()
 		CloseHandle(m_hMutex);
 }
 
-// Î¨Ò»µÄÒ»¸ö CPokemonRomViewerApp ¶ÔÏó
+// å”¯ä¸€çš„ä¸€ä¸ª CPokemonRomViewerApp å¯¹è±¡
 CPokemonRomViewerApp theApp;
 ConfigStruct	cfg;
 CPokemonRom		rom;
@@ -266,7 +266,7 @@ CPokemonRom		rom;
 #define VAL_UI_LANG		_T("UI Language")
 #define VAL_UI_COUNT	_T("UI Count")
 
-// CPokemonRomViewerApp ³õÊ¼»¯
+// CPokemonRomViewerApp åˆå§‹åŒ–
 BOOL CPokemonRomViewerApp::InitInstance()
 {
 	BOOL	bResult = TRUE;
@@ -356,24 +356,24 @@ BOOL CPokemonRomViewerApp::InitInstance()
 }
 
 
-// CPokemonRomViewerApp ÏûÏ¢´¦Àí³ÌÐò
+// CPokemonRomViewerApp æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 
 
-// ÓÃÓÚÓ¦ÓÃ³ÌÐò¡°¹ØÓÚ¡±²Ëµ¥ÏîµÄ CAboutDlg ¶Ô»°¿ò
+// ç”¨äºŽåº”ç”¨ç¨‹åºâ€œå…³äºŽâ€èœå•é¡¹çš„ CAboutDlg å¯¹è¯æ¡†
 
 class CAboutDlg : public CDialog
 {
 public:
 	CAboutDlg();
 
-// ¶Ô»°¿òÊý¾Ý
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_ABOUTBOX };
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 
-// ÊµÏÖ
+// å®žçŽ°
 protected:
 	DECLARE_MESSAGE_MAP()
 };
@@ -390,14 +390,14 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
 END_MESSAGE_MAP()
 
-// ÓÃÓÚÔËÐÐ¶Ô»°¿òµÄÓ¦ÓÃ³ÌÐòÃüÁî
+// ç”¨äºŽè¿è¡Œå¯¹è¯æ¡†çš„åº”ç”¨ç¨‹åºå‘½ä»¤
 void CPokemonRomViewerApp::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
 
-// CPokemonRomViewerApp ÏûÏ¢´¦Àí³ÌÐò
+// CPokemonRomViewerApp æ¶ˆæ¯å¤„ç†ç¨‹åº
 BOOL CPokemonRomViewerApp::ReadStringLists()
 {
 	BOOL			bResult;
@@ -688,7 +688,7 @@ BOOL CPokemonRomViewerApp::ApplyConfig(BOOL bRomChanged, BOOL bUILangChanged)
 
 void CPokemonRomViewerApp::OnConfig()
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤å¤„ç†ç¨‹åºä»£ç 
 	CConfigDlg	cd;
 	BOOL	bRomChanged = FALSE;
 	BOOL	bUILangChanged = FALSE;
@@ -718,78 +718,78 @@ void CPokemonRomViewerApp::OnConfig()
 
 void CPokemonRomViewerApp::OnShowBreed()
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤å¤„ç†ç¨‹åºä»£ç 
 	m_dlgBreed.ShowWindow(SW_SHOWDEFAULT);
 	m_dlgBreed.SetForegroundWindow();
 }
 
 void CPokemonRomViewerApp::OnUpdateShowBreed(CCmdUI *pCmdUI)
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî¸üÐÂÓÃ»§½çÃæ´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤æ›´æ–°ç”¨æˆ·ç•Œé¢å¤„ç†ç¨‹åºä»£ç 
 	pCmdUI->Enable(rom.m_bOpened);
 }
 
 void CPokemonRomViewerApp::OnShowEvo()
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤å¤„ç†ç¨‹åºä»£ç 
 	m_dlgEvo.ShowWindow(SW_SHOWDEFAULT);
 	m_dlgEvo.SetForegroundWindow();
 }
 
 void CPokemonRomViewerApp::OnUpdateShowEvo(CCmdUI *pCmdUI)
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî¸üÐÂÓÃ»§½çÃæ´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤æ›´æ–°ç”¨æˆ·ç•Œé¢å¤„ç†ç¨‹åºä»£ç 
 	pCmdUI->Enable(rom.m_bOpened);
 }
 
 void CPokemonRomViewerApp::OnShowItem()
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤å¤„ç†ç¨‹åºä»£ç 
 	m_dlgItem.ShowWindow(SW_SHOWDEFAULT);
 	m_dlgItem.SetForegroundWindow();
 }
 
 void CPokemonRomViewerApp::OnUpdateShowItem(CCmdUI *pCmdUI)
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî¸üÐÂÓÃ»§½çÃæ´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤æ›´æ–°ç”¨æˆ·ç•Œé¢å¤„ç†ç¨‹åºä»£ç 
 	pCmdUI->Enable(rom.m_bOpened);
 }
 
 void CPokemonRomViewerApp::OnShowSkill()
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤å¤„ç†ç¨‹åºä»£ç 
 	m_dlgSkill.ShowWindow(SW_SHOWDEFAULT);
 	m_dlgSkill.SetForegroundWindow();
 }
 
 void CPokemonRomViewerApp::OnUpdateShowSkill(CCmdUI *pCmdUI)
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî¸üÐÂÓÃ»§½çÃæ´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤æ›´æ–°ç”¨æˆ·ç•Œé¢å¤„ç†ç¨‹åºä»£ç 
 	pCmdUI->Enable(rom.m_bOpened);
 }
 
 void CPokemonRomViewerApp::OnShowEnc()
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤å¤„ç†ç¨‹åºä»£ç 
 	m_dlgEnc.ShowWindow(SW_SHOWDEFAULT);
 	m_dlgEnc.SetForegroundWindow();
 }
 
 void CPokemonRomViewerApp::OnUpdateShowEnc(CCmdUI *pCmdUI)
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî¸üÐÂÓÃ»§½çÃæ´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤æ›´æ–°ç”¨æˆ·ç•Œé¢å¤„ç†ç¨‹åºä»£ç 
 	pCmdUI->Enable(rom.m_bOpened);
 }
 
 void CPokemonRomViewerApp::OnShowBerry()
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤å¤„ç†ç¨‹åºä»£ç 
 	m_dlgBerry.ShowWindow(SW_SHOWDEFAULT);
 	m_dlgBerry.SetForegroundWindow();
 }
 
 void CPokemonRomViewerApp::OnUpdateShowBerry(CCmdUI *pCmdUI)
 {
-	// TODO: ÔÚ´ËÌí¼ÓÃüÁî¸üÐÂÓÃ»§½çÃæ´¦Àí³ÌÐò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ å‘½ä»¤æ›´æ–°ç”¨æˆ·ç•Œé¢å¤„ç†ç¨‹åºä»£ç 
 	pCmdUI->Enable(rom.m_bOpened);
 }

@@ -1,11 +1,11 @@
-// MemPmMiscPage.cpp : ÊµÏÖÎÄ¼ş
+// MemPmMiscPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonMemHack.h"
 #include "MemPmMiscPage.h"
 
-// CMemPmMiscPage ¶Ô»°¿ò
+// CMemPmMiscPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CMemPmMiscPage, CMemPmTabPage)
 CMemPmMiscPage::CMemPmMiscPage()
@@ -57,7 +57,7 @@ BEGIN_MESSAGE_MAP(CMemPmMiscPage, CMemPmTabPage)
 END_MESSAGE_MAP()
 
 
-// CMemPmMiscPage ÏûÏ¢´¦Àí³ÌĞò
+// CMemPmMiscPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CMemPmMiscPage::TransData(BOOL bToControls)
 {
 	BYTE	bIndex;
@@ -196,7 +196,7 @@ BOOL CMemPmMiscPage::OnInitDialog()
 	}
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CMemPmMiscPage::SetPmRear()
@@ -273,7 +273,7 @@ void CMemPmMiscPage::SetAddress()
 	}
 	else
 	{
-		SetDlgItemText(IDC_ADDRESS, _T("ÎŞ·¨»ñµÃµØÖ·£¡"));
+		SetDlgItemText(IDC_ADDRESS, _T("æ— æ³•è·å¾—åœ°å€ï¼"));
 	}
 }
 
@@ -358,7 +358,7 @@ void CMemPmMiscPage::OnBnClickedAutoCalc()
 
 		for(bIndex = 0; bIndex < 6; ++bIndex)
 		{
-			if(wBreed == 410 && pwDeoxysBreedAbilities)	// ¥Ç¥£¥ª¥­¥·¥¹
+			if(wBreed == 410 && pwDeoxysBreedAbilities)	// ãƒ‡ã‚£ã‚ªã‚­ã‚·ã‚¹
 				wBreedAbl = pwDeoxysBreedAbilities[bIndex];
 			else
 				wBreedAbl = (&(pBreed->bHP))[bIndex];

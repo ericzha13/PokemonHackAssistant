@@ -1,11 +1,11 @@
-// BreedMachineLearnPage.cpp : ÊµÏÖÎÄ¼ş
+// BreedMachineLearnPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonRomViewer.h"
 #include "BreedMachineLearnPage.h"
 
-// CBreedMachineLearnPage ¶Ô»°¿ò
+// CBreedMachineLearnPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CBreedMachineLearnPage, CBreedTabPage)
 CBreedMachineLearnPage::CBreedMachineLearnPage()
@@ -41,22 +41,22 @@ BEGIN_MESSAGE_MAP(CBreedMachineLearnPage, CBreedTabPage)
 END_MESSAGE_MAP()
 
 
-// CBreedMachineLearnPage ÏûÏ¢´¦Àí³ÌĞò
+// CBreedMachineLearnPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 BOOL CBreedMachineLearnPage::OnInitDialog()
 {
 	CBreedTabPage::OnInitDialog();
 
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯
+	// TODO:  åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–
 	m_ctrlLearnList.SetExtendedStyle(LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES | LVS_EX_LABELTIP | LVS_EX_HEADERDRAGDROP | LVS_EX_CHECKBOXES);
 
-	m_ctrlLearnList.InsertColumn(0, _T("»úÆ÷"), LVCFMT_LEFT, 50, 0);
-	m_ctrlLearnList.InsertColumn(1, _T("¼¼ÄÜ"), LVCFMT_LEFT, 120, 1);
-	m_ctrlLearnList.InsertColumn(2, _T("¼¼ÄÜ±àºÅ"), LVCFMT_LEFT, 40, 2);
+	m_ctrlLearnList.InsertColumn(0, _T("æœºå™¨"), LVCFMT_LEFT, 50, 0);
+	m_ctrlLearnList.InsertColumn(1, _T("æŠ€èƒ½"), LVCFMT_LEFT, 120, 1);
+	m_ctrlLearnList.InsertColumn(2, _T("æŠ€èƒ½ç¼–å·"), LVCFMT_LEFT, 40, 2);
 
 	CheckDlgButton(IDC_ML_ORDER_CHECKED, BST_CHECKED);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CBreedMachineLearnPage::GetMachineSkillList()
@@ -103,9 +103,9 @@ void CBreedMachineLearnPage::RefreshLearnList()
 		// machine
 		lvi.iSubItem = 0;
 		if(dwIndex < 50)
-			szText.Format(_T("¼¼%02lu"), dwIndex + 1);
+			szText.Format(_T("æŠ€%02lu"), dwIndex + 1);
 		else
-			szText.Format(_T("ÃØ%lu"), dwIndex - 49);
+			szText.Format(_T("ç§˜%lu"), dwIndex - 49);
 		lvi.pszText = szText.GetBuffer();
 		if(dwIndex < dwCount)
 			m_ctrlLearnList.SetItem(&lvi);
@@ -205,7 +205,7 @@ void CBreedMachineLearnPage::SetCheckedCount()
 {
 	CString	szText;
 
-	szText.Format(_T("%luÏî"), m_dwCheckedCount);
+	szText.Format(_T("%lué¡¹"), m_dwCheckedCount);
 	SetDlgItemText(IDC_ML_COUNT, szText);
 }
 
@@ -246,7 +246,7 @@ void CBreedMachineLearnPage::SetSkillDesc()
 void CBreedMachineLearnPage::OnLvnItemchangedMlList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	DWORD_PTR	dwData;
@@ -291,7 +291,7 @@ void CBreedMachineLearnPage::OnLvnItemchangedMlList(NMHDR *pNMHDR, LRESULT *pRes
 
 void CBreedMachineLearnPage::OnNMDblclkMlList(NMHDR *pNMHDR, LRESULT *pResult)
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	if(	m_pMachineLearnList &&
@@ -327,7 +327,7 @@ INT CALLBACK CBreedMachineLearnPage::SortSkillList(LPARAM lParam1, LPARAM lParam
 void CBreedMachineLearnPage::OnHdnItemclickMlList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMHEADER phdr = reinterpret_cast<LPNMHEADER>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	POSITION	pos;

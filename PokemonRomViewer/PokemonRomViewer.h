@@ -1,9 +1,9 @@
-// PokemonRomViewer.h : PokemonRomViewer Ó¦ÓÃ³ÌĞòµÄÖ÷Í·ÎÄ¼ş
+// PokemonRomViewer.h : PokemonRomViewer åº”ç”¨ç¨‹åºçš„ä¸»å¤´æ–‡ä»¶
 //
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error ÔÚ°üº¬ÓÃÓÚ PCH µÄ´ËÎÄ¼şÖ®Ç°°üº¬¡°stdafx.h¡± 
+	#error åœ¨åŒ…å«ç”¨äº PCH çš„æ­¤æ–‡ä»¶ä¹‹å‰åŒ…å«â€œstdafx.hâ€ 
 #endif
 
 #include "resource.h"

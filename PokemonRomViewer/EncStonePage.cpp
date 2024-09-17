@@ -1,4 +1,4 @@
-// EncStonePage.cpp : ÊµÏÖÎÄ¼ş
+// EncStonePage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "EncStonePage.h"
 
 
-// CEncStonePage ¶Ô»°¿ò
+// CEncStonePage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CEncStonePage, CEncTabPage)
 CEncStonePage::CEncStonePage()
@@ -47,7 +47,7 @@ BEGIN_MESSAGE_MAP(CEncStonePage, CEncTabPage)
 END_MESSAGE_MAP()
 
 
-// CEncStonePage ÏûÏ¢´¦Àí³ÌĞò
+// CEncStonePage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CEncStonePage::OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged)
 {
 	static BOOL bInitialized = FALSE;

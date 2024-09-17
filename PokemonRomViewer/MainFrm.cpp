@@ -1,4 +1,4 @@
-// MainFrm.cpp : CMainFrame ÀàµÄÊµÏÖ
+// MainFrm.cpp : CMainFrame ç±»çš„å®ç°
 //
 
 #include "stdafx.h"
@@ -22,18 +22,18 @@ END_MESSAGE_MAP()
 
 static UINT indicators[] =
 {
-	ID_SEPARATOR,           // ×´Ì¬ĞĞÖ¸Ê¾Æ÷
+	ID_SEPARATOR,           // çŠ¶æ€è¡ŒæŒ‡ç¤ºå™¨
 	ID_INDICATOR_CAPS,
 	ID_INDICATOR_NUM,
 	ID_INDICATOR_SCRL,
 };
 
 
-// CMainFrame ¹¹Ôì/Îö¹¹
+// CMainFrame æ„é€ /ææ„
 
 CMainFrame::CMainFrame()
 {
-	// TODO: ÔÚ´ËÌí¼Ó³ÉÔ±³õÊ¼»¯´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æˆå‘˜åˆå§‹åŒ–ä»£ç 
 }
 
 CMainFrame::~CMainFrame()
@@ -45,11 +45,11 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 {
 	if (CFrameWnd::OnCreate(lpCreateStruct) == -1)
 		return -1;
-	// ´´½¨Ò»¸öÊÓÍ¼ÒÔÕ¼ÓÃ¿ò¼ÜµÄ¹¤×÷Çø
+	// åˆ›å»ºä¸€ä¸ªè§†å›¾ä»¥å ç”¨æ¡†æ¶çš„å·¥ä½œåŒº
 	if (!m_wndView.Create(NULL, NULL, AFX_WS_DEFAULT_VIEW,
 		CRect(0, 0, 0, 0), this, AFX_IDW_PANE_FIRST, NULL))
 	{
-		TRACE0("Î´ÄÜ´´½¨ÊÓÍ¼´°¿Ú\n");
+		TRACE0("æœªèƒ½åˆ›å»ºè§†å›¾çª—å£\n");
 		return -1;
 	}
 
@@ -57,18 +57,18 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		| CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
 		!m_wndToolBar.LoadToolBar(IDR_MAINFRAME))
 	{
-		TRACE0("Î´ÄÜ´´½¨¹¤¾ßÀ¸\n");
-		return -1;      // Î´ÄÜ´´½¨
+		TRACE0("æœªèƒ½åˆ›å»ºå·¥å…·æ \n");
+		return -1;      // æœªèƒ½åˆ›å»º
 	}
 
 	if (!m_wndStatusBar.Create(this) ||
 		!m_wndStatusBar.SetIndicators(indicators,
 		  sizeof(indicators)/sizeof(UINT)))
 	{
-		TRACE0("Î´ÄÜ´´½¨×´Ì¬À¸\n");
-		return -1;      // Î´ÄÜ´´½¨
+		TRACE0("æœªèƒ½åˆ›å»ºçŠ¶æ€æ \n");
+		return -1;      // æœªèƒ½åˆ›å»º
 	}
-	// TODO: Èç¹û²»ĞèÒª¹¤¾ßÀ¸¿ÉÍ£¿¿£¬ÔòÉ¾³ıÕâÈıĞĞ
+	// TODO: å¦‚æœä¸éœ€è¦å·¥å…·æ å¯åœé ï¼Œåˆ™åˆ é™¤è¿™ä¸‰è¡Œ
 	m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
 	EnableDocking(CBRS_ALIGN_ANY);
 	DockControlBar(&m_wndToolBar);
@@ -82,8 +82,8 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 	cs.cy = 90;
 	if( !CFrameWnd::PreCreateWindow(cs) )
 		return FALSE;
-	// TODO: ÔÚ´Ë´¦Í¨¹ıĞŞ¸Ä CREATESTRUCT cs À´ĞŞ¸Ä´°¿ÚÀà»ò
-	// ÑùÊ½
+	// TODO: åœ¨æ­¤å¤„é€šè¿‡ä¿®æ”¹ CREATESTRUCT cs æ¥ä¿®æ”¹çª—å£ç±»æˆ–
+	// æ ·å¼
 
 	cs.dwExStyle &= ~WS_EX_CLIENTEDGE;
 	cs.lpszClass = AfxRegisterWndClass(0, 0, 0, AfxGetApp()->LoadIcon(IDR_MAINFRAME));
@@ -91,7 +91,7 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 }
 
 
-// CMainFrame Õï¶Ï
+// CMainFrame è¯Šæ–­
 
 #ifdef _DEBUG
 void CMainFrame::AssertValid() const
@@ -107,20 +107,20 @@ void CMainFrame::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 
-// CMainFrame ÏûÏ¢´¦Àí³ÌĞò
+// CMainFrame æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 void CMainFrame::OnSetFocus(CWnd* /*pOldWnd*/)
 {
-	// ½«½¹µãÇ°ÒÆµ½ÊÓÍ¼´°¿Ú
+	// å°†ç„¦ç‚¹å‰ç§»åˆ°è§†å›¾çª—å£
 	m_wndView.SetFocus();
 }
 
 BOOL CMainFrame::OnCmdMsg(UINT nID, int nCode, void* pExtra, AFX_CMDHANDLERINFO* pHandlerInfo)
 {
-	// ÈÃÊÓÍ¼µÚÒ»´Î³¢ÊÔ¸ÃÃüÁî
+	// è®©è§†å›¾ç¬¬ä¸€æ¬¡å°è¯•è¯¥å‘½ä»¤
 	if (m_wndView.OnCmdMsg(nID, nCode, pExtra, pHandlerInfo))
 		return TRUE;
 
-	// ·ñÔò£¬Ö´ĞĞÄ¬ÈÏ´¦Àí
+	// å¦åˆ™ï¼Œæ‰§è¡Œé»˜è®¤å¤„ç†
 	return CFrameWnd::OnCmdMsg(nID, nCode, pExtra, pHandlerInfo);
 }

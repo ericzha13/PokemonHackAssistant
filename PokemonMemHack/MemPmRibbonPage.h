@@ -1,20 +1,20 @@
 #pragma once
 
 
-// CMemPmRibbonPage ¶Ô»°¿ò
+// CMemPmRibbonPage å¯¹è¯æ¡†
 
 class CMemPmRibbonPage : public CMemPmTabPage
 {
 	DECLARE_DYNAMIC(CMemPmRibbonPage)
 
 public:
-	CMemPmRibbonPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CMemPmRibbonPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CMemPmRibbonPage();
 
 	void TransData(BOOL bToControls);
 	void OnChangeUILang(VOID);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_MEM_PM_RIBBON };
 
 protected:
@@ -23,7 +23,7 @@ protected:
 	void SetRibbons();
 	void GetRibbons();
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	afx_msg void OnClickRadioButtons(UINT uID);
 	afx_msg void OnBnClickedRibbons32();
 	afx_msg void OnBnClickedRibbons25();

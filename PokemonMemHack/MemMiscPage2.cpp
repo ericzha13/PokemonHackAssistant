@@ -1,11 +1,11 @@
-// MemMiscPage2.cpp :  µœ÷Œƒº˛
+// MemMiscPage2.cpp : ÂÆûÁé∞Êñá‰ª∂
 //
 
 #include "stdafx.h"
 #include "PokemonMemHack.h"
 #include "MemMiscPage2.h"
 
-// CMemMiscPage2 ∂‘ª∞øÚ
+// CMemMiscPage2 ÂØπËØùÊ°Ü
 
 IMPLEMENT_DYNAMIC(CMemMiscPage2, CPropertyPage)
 CMemMiscPage2::CMemMiscPage2()
@@ -43,7 +43,7 @@ BEGIN_MESSAGE_MAP(CMemMiscPage2, CPropertyPage)
 END_MESSAGE_MAP()
 
 
-// CMemMiscPage2 œ˚œ¢¥¶¿Ì≥Ã–Ú
+// CMemMiscPage2 Ê∂àÊÅØÂ§ÑÁêÜÁ®ãÂ∫è
 void CMemMiscPage2::OnChangeUILang(VOID)
 {
 }
@@ -66,7 +66,7 @@ BOOL CMemMiscPage2::OnInitDialog()
 	m_ctrlGameVersionList.SetCurSel(pm_emerald);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// “Ï≥£: OCX  Ù–‘“≥”¶∑µªÿ FALSE
+	// ÂºÇÂ∏∏: OCX Â±ûÊÄßÈ°µÂ∫îËøîÂõû FALSE
 }
 
 
@@ -119,7 +119,7 @@ void CMemMiscPage2::OnBnClickedGiveAllPokemon()
 
 	if(!g_MemRom.m_bOpened)
 	{
-		AfxMessageBox(_T("”Œœ∑◊ ¡œªπŒ¥¥”ƒ⁄¥Ê∂¡»Î£¨«Îœ»À¢–¬∂”ŒÈ÷–µƒ≥ËŒÔ£°"), MB_OK | MB_ICONINFORMATION);
+		AfxMessageBox(_T("Ê∏∏ÊàèËµÑÊñôËøòÊú™‰ªéÂÜÖÂ≠òËØªÂÖ•ÔºåËØ∑ÂÖàÂà∑Êñ∞Èòü‰ºç‰∏≠ÁöÑÂÆ†Áâ©ÔºÅ"), MB_OK | MB_ICONINFORMATION);
 		return;
 	}
 
@@ -260,7 +260,7 @@ void CMemMiscPage2::OnBnClickedSetPokeball()
 			if(wBreed == 0 || wBreed >= BREED_COUNT)
 				continue;
 
-			ppc->SetPokeBall(0x00B);	// •¥©`•∏•„•π•‹©`•Î
+			ppc->SetPokeBall(0x00B);	// „Ç¥`„Ç∏„É£„Çπ„Éú`„É´
 		}
 
 		bResult = g_MemHack.SavePokemonsInPC();
@@ -368,7 +368,7 @@ BOOL CMemMiscPage2::SetupTimer()
 				CheckDlgButton(IDC_LOCK_DAYCARE_COUNTER2_TO_FE, BST_UNCHECKED);
 				CheckDlgButton(IDC_LOCK_EXP_GAIN_TO_7FFF, BST_UNCHECKED);
 				m_dwTimerFlags = 0;
-				AfxMessageBox(_T("Œﬁ∑®¥¥Ω® ±÷”£°"));
+				AfxMessageBox(_T("Êó†Ê≥ïÂàõÂª∫Êó∂ÈíüÔºÅ"));
 				bResult = FALSE;
 			}
 		}

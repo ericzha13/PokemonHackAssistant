@@ -1,4 +1,4 @@
-// MemPmTabPage.cpp : ÊµÏÖÎÄ¼ş
+// MemPmTabPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "MemPmPage.h"
 
 
-// CMemPmTabPage ¶Ô»°¿ò
+// CMemPmTabPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CMemPmTabPage, CDialog)
 CMemPmTabPage::CMemPmTabPage()
@@ -27,7 +27,7 @@ BEGIN_MESSAGE_MAP(CMemPmTabPage, CDialog)
 END_MESSAGE_MAP()
 
 
-// CMemPmTabPage ÏûÏ¢´¦Àí³ÌĞò
+// CMemPmTabPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 void CMemPmTabPage::OnOK()
 {

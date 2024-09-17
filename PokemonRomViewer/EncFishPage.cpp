@@ -1,4 +1,4 @@
-// EncFishPage.cpp : ÊµÏÖÎÄ¼ş
+// EncFishPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "EncFishPage.h"
 
 
-// CEncFishPage ¶Ô»°¿ò
+// CEncFishPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CEncFishPage, CEncTabPage)
 CEncFishPage::CEncFishPage()
@@ -45,7 +45,7 @@ BEGIN_MESSAGE_MAP(CEncFishPage, CEncTabPage)
 	ON_CONTROL_RANGE(STN_DBLCLK, IDC_LAND_IMAGE0, IDC_LAND_IMAGE11, OnDblClickedIcon)
 END_MESSAGE_MAP()
 
-// CEncFishPage ÏûÏ¢´¦Àí³ÌĞò
+// CEncFishPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CEncFishPage::OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged)
 {
 	static BOOL bInitialized = FALSE;

@@ -1,4 +1,4 @@
-// MemPmAbilityPage.cpp : ÊµÏÖÎÄ¼ş
+// MemPmAbilityPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "MemPmAbilityPage.h"
 
 
-// CMemPmAbilityPage ¶Ô»°¿ò
+// CMemPmAbilityPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CMemPmAbilityPage, CMemPmTabPage)
 CMemPmAbilityPage::CMemPmAbilityPage()
@@ -41,7 +41,7 @@ BEGIN_MESSAGE_MAP(CMemPmAbilityPage, CMemPmTabPage)
 END_MESSAGE_MAP()
 
 
-// CMemPmAbilityPage ÏûÏ¢´¦Àí³ÌĞò
+// CMemPmAbilityPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CMemPmAbilityPage::TransData(BOOL bToControls)
 {
 	BYTE	bIndex;

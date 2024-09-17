@@ -1,11 +1,11 @@
-// ItemDlg.cpp : ÊµÏÖÎÄ¼ş
+// ItemDlg.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonRomViewer.h"
 #include "ItemDlg.h"
 
-// CItemDlg ¶Ô»°¿ò
+// CItemDlg å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CItemDlg, CBaseDialog)
 CItemDlg::CItemDlg()
@@ -34,7 +34,7 @@ BEGIN_MESSAGE_MAP(CItemDlg, CBaseDialog)
 END_MESSAGE_MAP()
 
 
-// CItemDlg ÏûÏ¢´¦Àí³ÌĞò
+// CItemDlg æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CItemDlg::SetItemList()
 {
 	if(!rom.m_bOpened)
@@ -118,7 +118,7 @@ void CItemDlg::GetPrice()
 
 void CItemDlg::OnBnClickedRefresh()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	if(!rom.ReadItemList())
 	{
 		AfxMessageBox(IDS_ERR_ROM_READ);
@@ -131,7 +131,7 @@ void CItemDlg::OnBnClickedRefresh()
 
 void CItemDlg::OnBnClickedConfirm()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	GetPrice();
 
 	if(!rom.SaveItemList())
@@ -142,7 +142,7 @@ void CItemDlg::OnBnClickedConfirm()
 
 void CItemDlg::OnLbnSelchangeItmItemList()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	GetPrice();
 	SetPrice();
 	SetDesc();

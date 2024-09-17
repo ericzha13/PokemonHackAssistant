@@ -1,4 +1,4 @@
-// PokemonMemHackDlg.h : Í·ÎÄ¼ş
+// PokemonMemHackDlg.h : å¤´æ–‡ä»¶
 //
 
 #pragma once
@@ -7,21 +7,21 @@
 #include "MemMiscPage1.h"
 #include "MemMiscPage2.h"
 
-// CPokemonMemHackDlg ¶Ô»°¿ò
+// CPokemonMemHackDlg å¯¹è¯æ¡†
 class CPokemonMemHackDlg : public CDialog
 {
-// ¹¹Ôì
+// æ„é€ 
 public:
-	CPokemonMemHackDlg(CWnd* pParent = NULL);	// ±ê×¼¹¹Ôìº¯Êı
+	CPokemonMemHackDlg(CWnd* pParent = NULL);	// æ ‡å‡†æ„é€ å‡½æ•°
 	~CPokemonMemHackDlg();
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_POKEMONMEMHACK_DIALOG };
 
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);	// DDX/DDV æ”¯æŒ
 
-// ÊµÏÖ
+// å®ç°
 protected:
 	HICON	m_hIcon;
 
@@ -31,7 +31,7 @@ protected:
 	CMemMiscPage2	m_pageMisc2;
 	CPropertySheet *m_pPropSht;
 
-	// Éú³ÉµÄÏûÏ¢Ó³Éäº¯Êı
+	// ç”Ÿæˆçš„æ¶ˆæ¯æ˜ å°„å‡½æ•°
 	virtual BOOL OnInitDialog();
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();

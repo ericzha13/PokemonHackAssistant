@@ -1,11 +1,11 @@
-// MemPmRibbonPage.cpp : ÊµÏÖÎÄ¼ş
+// MemPmRibbonPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonMemHack.h"
 #include "MemPmRibbonPage.h"
 
-// CMemPmRibbonPage ¶Ô»°¿ò
+// CMemPmRibbonPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CMemPmRibbonPage, CMemPmTabPage)
 CMemPmRibbonPage::CMemPmRibbonPage()
@@ -32,7 +32,7 @@ BEGIN_MESSAGE_MAP(CMemPmRibbonPage, CMemPmTabPage)
 END_MESSAGE_MAP()
 
 
-// CMemPmRibbonPage ÏûÏ¢´¦Àí³ÌĞò
+// CMemPmRibbonPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CMemPmRibbonPage::TransData(BOOL bToControls)
 {
 	m_ppc = GetPokemonCodec();

@@ -1,11 +1,11 @@
-// MemMiscPage1.cpp : ÊµÏÖÎÄ¼ş
+// MemMiscPage1.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonMemHack.h"
 #include "MemMiscPage1.h"
 
-// CMemMiscPage1 ¶Ô»°¿ò
+// CMemMiscPage1 å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CMemMiscPage1, CPropertyPage)
 CMemMiscPage1::CMemMiscPage1()
@@ -43,7 +43,7 @@ BEGIN_MESSAGE_MAP(CMemMiscPage1, CPropertyPage)
 END_MESSAGE_MAP()
 
 
-// CMemMiscPage1 ÏûÏ¢´¦Àí³ÌĞò
+// CMemMiscPage1 æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CMemMiscPage1::OnChangeUILang(VOID)
 {
 	if(!m_bCreated)
@@ -76,7 +76,7 @@ BOOL CMemMiscPage1::OnInitDialog()
 	OnChangeUILang();
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 int CMemMiscPage1::OnCreate(LPCREATESTRUCT lpCreateStruct)

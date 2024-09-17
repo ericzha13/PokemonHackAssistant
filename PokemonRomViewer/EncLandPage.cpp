@@ -1,11 +1,11 @@
-// EncLandPage.cpp : ÊµÏÖÎÄ¼þ
+// EncLandPage.cpp : å®žçŽ°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonRomViewer.h"
 #include "EncLandPage.h"
 
-// CEncLandPage ¶Ô»°¿ò
+// CEncLandPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CEncLandPage, CEncTabPage)
 CEncLandPage::CEncLandPage()
@@ -44,7 +44,7 @@ BEGIN_MESSAGE_MAP(CEncLandPage, CEncTabPage)
 	ON_CONTROL_RANGE(STN_DBLCLK, IDC_LAND_IMAGE0, IDC_LAND_IMAGE11, OnDblClickedIcon)
 END_MESSAGE_MAP()
 
-// CEncLandPage ÏûÏ¢´¦Àí³ÌÐò
+// CEncLandPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CEncLandPage::OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged)
 {
 	static BOOL bInitialized = FALSE;
@@ -171,7 +171,7 @@ void CEncLandPage::GetBreed(DWORD dwIndex)
 		pEntry = &(m_pLandList->rgEntry[dwIndex]);
 		if(m_pAnnoonList)
 		{
-			if(pEntry->wBreed != 201)	// ¥¢¥ó¥Î©`¥ó
+			if(pEntry->wBreed != 201)	// ã‚¢ãƒ³ãƒŽ`ãƒ³
 				pEntry->wBreed = 201;
 
 			wBreed = m_ctrlBrdList[dwIndex].GetCurSel();

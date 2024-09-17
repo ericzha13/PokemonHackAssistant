@@ -1,4 +1,4 @@
-// BerryDlg.cpp : ÊµÏÖÎÄ¼ş
+// BerryDlg.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -13,7 +13,7 @@ struct BerrySortParam
 	BOOL	bAscending;
 };
 
-// CBerryDlg ¶Ô»°¿ò
+// CBerryDlg å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CBerryDlg, CBaseDialog)
 CBerryDlg::CBerryDlg()
@@ -40,31 +40,31 @@ BEGIN_MESSAGE_MAP(CBerryDlg, CBaseDialog)
 	ON_NOTIFY(LVN_ITEMCHANGED, IDC_BERRY_BERRY_LIST, OnLvnItemchangedBerryBerryList)
 END_MESSAGE_MAP()
 
-// CBerryDlg ÏûÏ¢´¦Àí³ÌĞò
+// CBerryDlg æ¶ˆæ¯å¤„ç†ç¨‹åº
 
 BOOL CBerryDlg::OnInitDialog()
 {
 	CBaseDialog::OnInitDialog();
 
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯
+	// TODO:  åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–
 	DWORD	dwBerry;
 	CString	szText;
 
 	m_ctrlBerryList.SetExtendedStyle(LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES | LVS_EX_HEADERDRAGDROP);
-	m_ctrlBerryList.InsertColumn(0,		_T("±àºÅ"),			LVCFMT_LEFT, 40,	0);
-	m_ctrlBerryList.InsertColumn(1,		_T("Ãû³Æ"),			LVCFMT_LEFT, 100,	1);
-	m_ctrlBerryList.InsertColumn(2,		_T("Ó²¶È"),			LVCFMT_LEFT, 40,	2);
-	m_ctrlBerryList.InsertColumn(3,		_T("´óĞ¡"),			LVCFMT_LEFT, 40,	3);
-	m_ctrlBerryList.InsertColumn(4,		_T("×î¶à"),			LVCFMT_LEFT, 40,	4);
-	m_ctrlBerryList.InsertColumn(5,		_T("×îÉÙ"),			LVCFMT_LEFT, 40,	5);
-	m_ctrlBerryList.InsertColumn(6,		_T("ºÄÊ±"),			LVCFMT_LEFT, 40,	6);
-	m_ctrlBerryList.InsertColumn(7,		_T("À±"),			LVCFMT_LEFT, 30,	7);
-	m_ctrlBerryList.InsertColumn(8,		_T("É¬"),			LVCFMT_LEFT, 30,	8);
-	m_ctrlBerryList.InsertColumn(9,		_T("Ìğ"),			LVCFMT_LEFT, 30,	9);
-	m_ctrlBerryList.InsertColumn(10,	_T("¿à"),			LVCFMT_LEFT, 30,	10);
-	m_ctrlBerryList.InsertColumn(11,	_T("Ëá"),			LVCFMT_LEFT, 30,	11);
-	m_ctrlBerryList.InsertColumn(12,	_T("»¬"),			LVCFMT_LEFT, 30,	12);
-	m_ctrlBerryList.InsertColumn(13,	_T("ËµÃ÷"),			LVCFMT_LEFT, 300,	13);
+	m_ctrlBerryList.InsertColumn(0,		_T("ç¼–å·"),			LVCFMT_LEFT, 40,	0);
+	m_ctrlBerryList.InsertColumn(1,		_T("åç§°"),			LVCFMT_LEFT, 100,	1);
+	m_ctrlBerryList.InsertColumn(2,		_T("ç¡¬åº¦"),			LVCFMT_LEFT, 40,	2);
+	m_ctrlBerryList.InsertColumn(3,		_T("å¤§å°"),			LVCFMT_LEFT, 40,	3);
+	m_ctrlBerryList.InsertColumn(4,		_T("æœ€å¤š"),			LVCFMT_LEFT, 40,	4);
+	m_ctrlBerryList.InsertColumn(5,		_T("æœ€å°‘"),			LVCFMT_LEFT, 40,	5);
+	m_ctrlBerryList.InsertColumn(6,		_T("è€—æ—¶"),			LVCFMT_LEFT, 40,	6);
+	m_ctrlBerryList.InsertColumn(7,		_T("è¾£"),			LVCFMT_LEFT, 30,	7);
+	m_ctrlBerryList.InsertColumn(8,		_T("æ¶©"),			LVCFMT_LEFT, 30,	8);
+	m_ctrlBerryList.InsertColumn(9,		_T("ç”œ"),			LVCFMT_LEFT, 30,	9);
+	m_ctrlBerryList.InsertColumn(10,	_T("è‹¦"),			LVCFMT_LEFT, 30,	10);
+	m_ctrlBerryList.InsertColumn(11,	_T("é…¸"),			LVCFMT_LEFT, 30,	11);
+	m_ctrlBerryList.InsertColumn(12,	_T("æ»‘"),			LVCFMT_LEFT, 30,	12);
+	m_ctrlBerryList.InsertColumn(13,	_T("è¯´æ˜"),			LVCFMT_LEFT, 300,	13);
 
 	for(dwBerry = 0; dwBerry < BERRY_COUNT; ++dwBerry)
 	{
@@ -73,7 +73,7 @@ BOOL CBerryDlg::OnInitDialog()
 	}
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CBerryDlg::SetBerryListItem(DWORD dwIndex)
@@ -85,47 +85,47 @@ void CBerryDlg::SetBerryListItem(DWORD dwIndex)
 	dwBerry = (DWORD)(m_ctrlBerryList.GetItemData(dwIndex));
 	pBerry = rom.GetBerryListEntry(dwBerry);
 
-	// Ó²¶È
+	// ç¡¬åº¦
 	szText.Format(_T("%hu"), pBerry->bFirm);
 	m_ctrlBerryList.SetItemText(dwIndex, 2, szText);
 
-	// ´óĞ¡
+	// å¤§å°
 	szText.Format(_T("%hu"), pBerry->bSize);
 	m_ctrlBerryList.SetItemText(dwIndex, 3, szText);
 
-	// ×îĞ¡²úÁ¿
+	// æœ€å°äº§é‡
 	szText.Format(_T("%hu"), pBerry->bMin);
 	m_ctrlBerryList.SetItemText(dwIndex, 4, szText);
 
-	// ×î´ó²úÁ¿
+	// æœ€å¤§äº§é‡
 	szText.Format(_T("%hu"), pBerry->bMax);
 	m_ctrlBerryList.SetItemText(dwIndex, 5, szText);
 
-	// Ã¿½×¶ÎºÄÊ±
+	// æ¯é˜¶æ®µè€—æ—¶
 	szText.Format(_T("%hu"), pBerry->bHoursPerStage);
 	m_ctrlBerryList.SetItemText(dwIndex, 6, szText);
 
-	// À±
+	// è¾£
 	szText.Format(_T("%hu"), pBerry->bSpicy);
 	m_ctrlBerryList.SetItemText(dwIndex, 7, szText);
 
-	// É¬
+	// æ¶©
 	szText.Format(_T("%hu"), pBerry->bDry);
 	m_ctrlBerryList.SetItemText(dwIndex, 8, szText);
 
-	// Ìğ
+	// ç”œ
 	szText.Format(_T("%hu"), pBerry->bSweet);
 	m_ctrlBerryList.SetItemText(dwIndex, 9, szText);
 
-	// ¿à
+	// è‹¦
 	szText.Format(_T("%hu"), pBerry->bBitter);
 	m_ctrlBerryList.SetItemText(dwIndex, 10, szText);
 
-	// Ëá
+	// é…¸
 	szText.Format(_T("%hu"), pBerry->bSour);
 	m_ctrlBerryList.SetItemText(dwIndex, 11, szText);
 
-	// »¬
+	// æ»‘
 	szText.Format(_T("%hu"), pBerry->bFeel);
 	m_ctrlBerryList.SetItemText(dwIndex, 12, szText);
 }
@@ -146,14 +146,14 @@ void CBerryDlg::OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged)
 		{
 			dwBerry = (DWORD)(m_ctrlBerryList.GetItemData(dwIndex));
 
-			// ±àºÅ
+			// ç¼–å·
 			szText.Format(szFmt22[cfg.dwCount], dwBerry + 1);
 			m_ctrlBerryList.SetItemText(dwBerry, 0, szText);
 
-			// Ãû³Æ
+			// åç§°
 			m_ctrlBerryList.SetItemText(dwBerry, 1, cfg.pItemNameList[FIRST_BERRY_IN_ITEM_LIST + dwBerry].rgszText[cfg.dwLang]);
 
-			// ËµÃ÷
+			// è¯´æ˜
 			m_ctrlBerryList.SetItemText(dwBerry, 13, cfg.pItemDescList[FIRST_BERRY_IN_ITEM_LIST + dwBerry].rgszText[cfg.dwLang]);
 		}
 	}
@@ -184,54 +184,54 @@ INT CALLBACK CBerryDlg::SortBerries(LPARAM lParam1, LPARAM lParam2, LPARAM lPara
 
 		switch(pBSP->iSubItem)
 		{
-		case 0:		// ±àºÅ
+		case 0:		// ç¼–å·
 			iResult = (INT)(lParam1 - lParam2);
 			break;
 
-		//case 1:		// Ãû³Æ
+		//case 1:		// åç§°
 		//	break;
 
-		case 2:		// Ó²¶È
+		case 2:		// ç¡¬åº¦
 			iResult = (INT)(pBerry0->bFirm - pBerry1->bFirm);
 			break;
 
-		case 3:		// ´óĞ¡
+		case 3:		// å¤§å°
 			iResult = (INT)(pBerry0->bSize - pBerry1->bSize);
 			break;
 
-		case 4:		// ×îĞ¡²úÁ¿
+		case 4:		// æœ€å°äº§é‡
 			iResult = (INT)(pBerry0->bMin - pBerry1->bMin);
 			break;
 
-		case 5:		// ×î´ó²úÁ¿
+		case 5:		// æœ€å¤§äº§é‡
 			iResult = (INT)(pBerry0->bMax - pBerry1->bMax);
 			break;
 
-		case 6:		// Ã¿½×¶ÎºÄÊ±
+		case 6:		// æ¯é˜¶æ®µè€—æ—¶
 			iResult = (INT)(pBerry0->bHoursPerStage - pBerry1->bHoursPerStage);
 			break;
 
-		case 7:		// À±
+		case 7:		// è¾£
 			iResult = (INT)(pBerry0->bSpicy - pBerry1->bSpicy);
 			break;
 
-		case 8:		// É¬
+		case 8:		// æ¶©
 			iResult = (INT)(pBerry0->bDry - pBerry1->bDry);
 			break;
 
-		case 9:		// Ìğ
+		case 9:		// ç”œ
 			iResult = (INT)(pBerry0->bSweet - pBerry1->bSweet);
 			break;
 
-		case 10:	// ¿à
+		case 10:	// è‹¦
 			iResult = (INT)(pBerry0->bBitter - pBerry1->bBitter);
 			break;
 
-		case 11:	// Ëá
+		case 11:	// é…¸
 			iResult = (INT)(pBerry0->bSour - pBerry1->bSour);
 			break;
 
-		case 12:	// »¬
+		case 12:	// æ»‘
 			iResult = (INT)(pBerry0->bFeel - pBerry1->bFeel);
 			break;
 		}
@@ -245,7 +245,7 @@ INT CALLBACK CBerryDlg::SortBerries(LPARAM lParam1, LPARAM lParam2, LPARAM lPara
 
 void CBerryDlg::OnBnClickedRefresh()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	if(!rom.ReadBerryList())
 	{
 		AfxMessageBox(IDS_ERR_ROM_READ);
@@ -259,7 +259,7 @@ void CBerryDlg::OnBnClickedRefresh()
 
 void CBerryDlg::OnBnClickedConfirm()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	GetBerry();
 
 	if(!rom.SaveBerryList())
@@ -277,47 +277,47 @@ void CBerryDlg::SetBerry()
 	{
 		pBerry = rom.GetBerryListEntry(m_dwCurBerry);
 
-		// Ó²¶È
+		// ç¡¬åº¦
 		szText.Format(_T("%hu"), pBerry->bFirm);
 		SetDlgItemText(IDC_BERRY_FIRM, szText);
 
-		// ´óĞ¡
+		// å¤§å°
 		szText.Format(_T("%hu"), pBerry->bSize);
 		SetDlgItemText(IDC_BERRY_SIZE, szText);
 
-		// ×îĞ¡²úÁ¿
+		// æœ€å°äº§é‡
 		szText.Format(_T("%hu"), pBerry->bMin);
 		SetDlgItemText(IDC_BERRY_MIN, szText);
 
-		// ×î´ó²úÁ¿
+		// æœ€å¤§äº§é‡
 		szText.Format(_T("%hu"), pBerry->bMax);
 		SetDlgItemText(IDC_BERRY_MAX, szText);
 
-		// Ã¿½×¶ÎºÄÊ±
+		// æ¯é˜¶æ®µè€—æ—¶
 		szText.Format(_T("%hu"), pBerry->bHoursPerStage);
 		SetDlgItemText(IDC_BERRY_HOURS_PER_STAGE, szText);
 
-		// À±
+		// è¾£
 		szText.Format(_T("%hu"), pBerry->bSpicy);
 		SetDlgItemText(IDC_BERRY_SPICY, szText);
 
-		// É¬
+		// æ¶©
 		szText.Format(_T("%hu"), pBerry->bDry);
 		SetDlgItemText(IDC_BERRY_DRY, szText);
 
-		// Ìğ
+		// ç”œ
 		szText.Format(_T("%hu"), pBerry->bSweet);
 		SetDlgItemText(IDC_BERRY_SWEET, szText);
 
-		// ¿à
+		// è‹¦
 		szText.Format(_T("%hu"), pBerry->bBitter);
 		SetDlgItemText(IDC_BERRY_BITTER, szText);
 
-		// Ëá
+		// é…¸
 		szText.Format(_T("%hu"), pBerry->bSour);
 		SetDlgItemText(IDC_BERRY_SOUR, szText);
 
-		// »¬
+		// æ»‘
 		szText.Format(_T("%hu"), pBerry->bFeel);
 		SetDlgItemText(IDC_BERRY_FEEL, szText);
 	}
@@ -332,51 +332,51 @@ void CBerryDlg::GetBerry()
 	{
 		pBerry = rom.GetBerryListEntry(m_dwCurBerry);
 
-		// Ó²¶È
+		// ç¡¬åº¦
 		GetDlgItemText(IDC_BERRY_FIRM, szText);
 		pBerry->bFirm = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 		if(pBerry->bFirm > 5)
 			pBerry->bFirm = 5;
 
-		// ´óĞ¡
+		// å¤§å°
 		GetDlgItemText(IDC_BERRY_SIZE, szText);
 		pBerry->bSize = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
-		// ×îĞ¡²úÁ¿
+		// æœ€å°äº§é‡
 		GetDlgItemText(IDC_BERRY_MIN, szText);
 		pBerry->bMin = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
-		// ×î´ó²úÁ¿
+		// æœ€å¤§äº§é‡
 		GetDlgItemText(IDC_BERRY_MAX, szText);
 		pBerry->bMax = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 		if(pBerry->bMax < pBerry->bMin)
 			pBerry->bMax = pBerry->bMin;
 
-		// Ã¿½×¶ÎºÄÊ±
+		// æ¯é˜¶æ®µè€—æ—¶
 		GetDlgItemText(IDC_BERRY_HOURS_PER_STAGE, szText);
 		pBerry->bHoursPerStage = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
-		// À±
+		// è¾£
 		GetDlgItemText(IDC_BERRY_SPICY, szText);
 		pBerry->bSpicy = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
-		// É¬
+		// æ¶©
 		GetDlgItemText(IDC_BERRY_DRY, szText);
 		pBerry->bDry = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
-		// Ìğ
+		// ç”œ
 		GetDlgItemText(IDC_BERRY_SWEET, szText);
 		pBerry->bSweet = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
-		// ¿à
+		// è‹¦
 		GetDlgItemText(IDC_BERRY_BITTER, szText);
 		pBerry->bBitter = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
-		// Ëá
+		// é…¸
 		GetDlgItemText(IDC_BERRY_SOUR, szText);
 		pBerry->bSour = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
-		// »¬
+		// æ»‘
 		GetDlgItemText(IDC_BERRY_FEEL, szText);
 		pBerry->bFeel = (BYTE)(min(_tcstoul(szText, 0, 0), 0xFF));
 
@@ -387,15 +387,15 @@ void CBerryDlg::GetBerry()
 void CBerryDlg::OnHdnItemclickBerryBerryList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMHEADER phdr = reinterpret_cast<LPNMHEADER>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	static BerrySortParam bsp = { 0, TRUE };
 	POSITION	pos;
 
 	if(!rom.m_bOpened ||
-		phdr->iItem == 1 ||	// Ãû³Æ
-		phdr->iItem == 13)	// ËµÃ÷
+		phdr->iItem == 1 ||	// åç§°
+		phdr->iItem == 13)	// è¯´æ˜
 	{
 		return;
 	}
@@ -429,7 +429,7 @@ void CBerryDlg::OnHdnItemclickBerryBerryList(NMHDR *pNMHDR, LRESULT *pResult)
 void CBerryDlg::OnLvnItemchangedBerryBerryList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	if((pNMLV->uNewState & (LVIS_SELECTED | LVIS_FOCUSED)) &&

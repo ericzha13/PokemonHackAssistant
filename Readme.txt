@@ -2,41 +2,41 @@
 Author: Fuzzier
 EMail:  fuzzier@qq.com
 
-ԭ�й���[SourceForge](https://sourceforge.net/projects/pm-hack-for-vba/).
-�������й���Github, �����Ͽ�ԴЭ��GPLv3.
+原托管于[SourceForge](https://sourceforge.net/projects/pm-hack-for-vba/).
+现重新托管于Github, 并加上开源协议GPLv3.
 
 
 ================= Project List =====================
 ProcessHandler
-	���ܣ��������̣��ṩ������д�����ڴ�ռ䡣
-	���ͣ���̬�⡣
-	�������ޡ�
+	功能：关联进程，提供函数读写进程内存空间。
+	类型：静态库。
+	依赖：无。
 
 VisualBoyHandler
-	���ܣ�����VisualBoyAdvance���̣��ṩ������дVBAģ���GBA�ڴ�ռ䡣
-	���ͣ���̬�⡣
-	������ProcessHandler
+	功能：关联VisualBoyAdvance进程，提供函数读写VBA模拟的GBA内存空间。
+	类型：静态库。
+	依赖：ProcessHandler
 
 PokemonCodec
-	���ܣ�
-		PokemonTool���ṩ����������/Ӣ���ַ���ת��Ϊ��Ϸ�ڲ����롣
-		PokemonCodec���ṩCPokemonCodec�����޸ĳ�����ڴ����ݡ�
-	���ͣ���̬�⡣
-	������MFC�⡣
+	功能：
+		PokemonTool：提供函数将日文/英文字符串转换为游戏内部代码。
+		PokemonCodec：提供CPokemonCodec类以修改宠物的内存数据。
+	类型：静态库。
+	依赖：MFC库。
 
 PokemonRom
-	���ܣ��ṩCPokemonRom���ROM�ļ�����VBA�ڴ��ȡROM��Ϣ��
-	���ͣ���̬�⡣
-	������VisualBoyHandler��MFC�⡣
+	功能：提供CPokemonRom类从ROM文件或者VBA内存读取ROM信息。
+	类型：静态库。
+	依赖：VisualBoyHandler，MFC库。
 
 PokemonMemHack
-	���ܣ�
-		�ṩCPokemonMemHackCore���޸ķǳ�����Ϣ������Ʒ�ȣ���
-		�ṩ�û������޸ĳ�����Ϸ��
-	���ͣ�EXE��ִ���ļ���
-	������PokemonRom��PokemonCodec��MFC�⡣
+	功能：
+		提供CPokemonMemHackCore类修改非宠物信息（如物品等）。
+		提供用户界面修改宠物游戏。
+	类型：EXE可执行文件。
+	依赖：PokemonRom，PokemonCodec，MFC库。
 
 PokemonRomViewer
-	���ܣ��ṩ�û������޸ĳ���ROM��
-	���ͣ�EXE��ִ���ļ���
-	������PokemonRom��MFC�⡣
+	功能：提供用户界面修改宠物ROM。
+	类型：EXE可执行文件。
+	依赖：PokemonRom，MFC库。

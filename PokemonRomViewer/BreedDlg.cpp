@@ -1,4 +1,4 @@
-// BreedDlg.cpp : ÊµÏÖÎÄ¼ş
+// BreedDlg.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "BreedDlg.h"
 #include ".\breeddlg.h"
 
-// CBreedDlg ¶Ô»°¿ò
+// CBreedDlg å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CBreedDlg, CBaseDialog)
 CBreedDlg::CBreedDlg()
@@ -18,25 +18,25 @@ CBreedDlg::CBreedDlg()
 	m_wCurBreed = -1;
 	m_dwCurOrder = pm_order_internal;
 
-	m_pageType.m_szPageName = _T("ÀàĞÍ");
+	m_pageType.m_szPageName = _T("ç±»å‹");
 	m_rgpPages[0] = &m_pageType;
 
-	m_pageAbl.m_szPageName = _T("ÄÜÁ¦");
+	m_pageAbl.m_szPageName = _T("èƒ½åŠ›");
 	m_rgpPages[1] = &m_pageAbl;
 
-	m_pageSpec.m_szPageName = _T("ÌØĞÔ");
+	m_pageSpec.m_szPageName = _T("ç‰¹æ€§");
 	m_rgpPages[2] = &m_pageSpec;
 
-	m_pageItem.m_szPageName = _T("µÀ¾ß");
+	m_pageItem.m_szPageName = _T("é“å…·");
 	m_rgpPages[3] = &m_pageItem;
 
-	m_pageLvlupLearn.m_szPageName = _T("Éı¼¶¼¼");
+	m_pageLvlupLearn.m_szPageName = _T("å‡çº§æŠ€");
 	m_rgpPages[4] = &m_pageLvlupLearn;
 
-	m_pageDeriveLearn.m_szPageName = _T("ÒÅ´«¼¼");
+	m_pageDeriveLearn.m_szPageName = _T("é—ä¼ æŠ€");
 	m_rgpPages[5] = &m_pageDeriveLearn;
 
-	m_pageMachineLearn.m_szPageName = _T("¼¼ÄÜ»úÆ÷");
+	m_pageMachineLearn.m_szPageName = _T("æŠ€èƒ½æœºå™¨");
 	m_rgpPages[6] = &m_pageMachineLearn;
 }
 
@@ -64,7 +64,7 @@ BEGIN_MESSAGE_MAP(CBreedDlg, CBaseDialog)
 END_MESSAGE_MAP()
 
 
-// CBreedDlg ÏûÏ¢´¦Àí³ÌĞò
+// CBreedDlg æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CBreedDlg::RefreshPmList(BOOL bRomChanged)
 {
 	BOOL	bResult;
@@ -204,7 +204,7 @@ BOOL CBreedDlg::OnInitDialog()
 {
 	CBaseDialog::OnInitDialog();
 
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯
+	// TODO:  åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–
 	DWORD	dwIndex;
 	RECT	rect;
 
@@ -231,19 +231,19 @@ BOOL CBreedDlg::OnInitDialog()
 	CheckDlgButton(IDC_ORDER_INTERNAL + m_dwCurOrder, BST_CHECKED);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CBreedDlg::OnTcnSelchangeTab(NMHDR *pNMHDR, LRESULT *pResult)
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 	ShowTabPage(m_ctrlTab.GetCurSel());
 }
 
 void CBreedDlg::OnBnClickedRefresh()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	DWORD	dwIndex;
 
 	if(	!rom.ReadBreedList() ||
@@ -291,7 +291,7 @@ void CBreedDlg::SetCurPm(WORD wBreed)
 
 void CBreedDlg::OnBnClickedConfirm()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	DWORD	dwIndex;
 
 	for(dwIndex = 0; dwIndex < BREED_PAGE_COUNT; ++dwIndex)
@@ -311,7 +311,7 @@ void CBreedDlg::OnBnClickedConfirm()
 void CBreedDlg::OnLvnItemchangedPmList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	DWORD	dwIndex;
@@ -345,7 +345,7 @@ void CBreedDlg::OnLvnItemchangedPmList(NMHDR *pNMHDR, LRESULT *pResult)
 
 void CBreedDlg::OnBnClickedFromEvo()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	WORD	wBreed = theApp.m_dlgEvo.m_wCurBreed;
 	SetCurPm(wBreed);
 }
@@ -353,7 +353,7 @@ void CBreedDlg::OnBnClickedFromEvo()
 void CBreedDlg::OnLvnGetInfoTipPmList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMLVGETINFOTIP pGetInfoTip = reinterpret_cast<LPNMLVGETINFOTIP>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	WORD	wBreed;

@@ -1,21 +1,21 @@
 #pragma once
 
 
-// CBreedTabPage ¶Ô»°¿ò
+// CBreedTabPage å¯¹è¯æ¡†
 
 class CBreedTabPage : public CBaseDialog
 {
 	DECLARE_DYNAMIC(CBreedTabPage)
 
 public:
-	CBreedTabPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CBreedTabPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBreedTabPage();
 
 	LPCTSTR	m_szPageName;
 
 	virtual void TransData(BOOL bToControls) = 0;
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 
 protected:
 	BreedListEntry *m_pBreed;
@@ -23,7 +23,7 @@ protected:
 
 	void GetCurrentBreed();
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual void OnCancel();
 	DECLARE_MESSAGE_MAP()
 };

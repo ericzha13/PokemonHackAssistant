@@ -1,20 +1,20 @@
 #pragma once
 
 
-// CBreedAblPage ¶Ô»°¿ò
+// CBreedAblPage å¯¹è¯æ¡†
 
 class CBreedAblPage : public CBreedTabPage
 {
 	DECLARE_DYNAMIC(CBreedAblPage)
 
 public:
-	CBreedAblPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CBreedAblPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBreedAblPage();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
 	void TransData(BOOL bToControls);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_BREED_ABL };
 
 protected:
@@ -31,7 +31,7 @@ protected:
 	void GetIndvAbl(DWORD dwIndex);
 	void CalcIndvSum();
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	afx_msg void OnEnChangeBrdAbl(UINT uID);
 	afx_msg void OnBnClickedExportBrd();
 	afx_msg void OnBnClickedExportEvo();

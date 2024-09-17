@@ -1,4 +1,4 @@
-// EncWaterPage.cpp : ÊµÏÖÎÄ¼ş
+// EncWaterPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "EncWaterPage.h"
 
 
-// CEncWaterPage ¶Ô»°¿ò
+// CEncWaterPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CEncWaterPage, CEncTabPage)
 CEncWaterPage::CEncWaterPage()
@@ -47,7 +47,7 @@ BEGIN_MESSAGE_MAP(CEncWaterPage, CEncTabPage)
 END_MESSAGE_MAP()
 
 
-// CEncWaterPage ÏûÏ¢´¦Àí³ÌĞò
+// CEncWaterPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CEncWaterPage::OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged)
 {
 	static BOOL bInitialized = FALSE;

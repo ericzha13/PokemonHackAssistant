@@ -2,20 +2,20 @@
 #include "afxwin.h"
 
 
-// CBreedSpecPage ¶Ô»°¿ò
+// CBreedSpecPage å¯¹è¯æ¡†
 
 class CBreedSpecPage : public CBreedTabPage
 {
 	DECLARE_DYNAMIC(CBreedSpecPage)
 
 public:
-	CBreedSpecPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CBreedSpecPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBreedSpecPage();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
 	void TransData(BOOL bToControls);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_BREED_SPEC };
 
 protected:
@@ -24,7 +24,7 @@ protected:
 
 	void SetSpecDesc(DWORD dwIndex);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	afx_msg void OnCbnSelchangeBrdSpecList0();
 	afx_msg void OnCbnSelchangeBrdSpecList1();
 	DECLARE_MESSAGE_MAP()

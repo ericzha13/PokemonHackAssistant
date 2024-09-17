@@ -1,26 +1,26 @@
 #pragma once
 
 
-// CConfigDlg ¶Ô»°¿ò
+// CConfigDlg å¯¹è¯æ¡†
 
 class CConfigDlg : public CDialog
 {
 	DECLARE_DYNAMIC(CConfigDlg)
 
 public:
-	CConfigDlg(CWnd* pParent = NULL);   // ±ê×¼¹¹Ôìº¯Êı
+	CConfigDlg(CWnd* pParent = NULL);   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CConfigDlg();
 
 	DWORD		m_dwLang;
 	DWORD		m_dwCount;
 	CString		m_szRomPath;
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_CONFIG };
 
 protected:
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	virtual void OnOK();
 	afx_msg void OnBnClickedBrowse();

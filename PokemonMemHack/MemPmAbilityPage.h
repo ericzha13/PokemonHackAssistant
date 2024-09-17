@@ -1,20 +1,20 @@
 #pragma once
 
 
-// CMemPmAbilityPage ¶Ô»°¿ò
+// CMemPmAbilityPage å¯¹è¯æ¡†
 
 class CMemPmAbilityPage : public CMemPmTabPage
 {
 	DECLARE_DYNAMIC(CMemPmAbilityPage)
 
 public:
-	CMemPmAbilityPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CMemPmAbilityPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CMemPmAbilityPage();
 
 	void TransData(BOOL bToControls);
 	void OnChangeUILang(VOID);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_MEM_PM_ABILITY };
 
 protected:
@@ -27,7 +27,7 @@ protected:
 	afx_msg void GetBB(UINT uID);
 	afx_msg void SetBBSum();
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	afx_msg void OnBnClickedIndvMax();
 	afx_msg void OnBnClickedBbMax();
 	afx_msg void OnBnClickedApMax();

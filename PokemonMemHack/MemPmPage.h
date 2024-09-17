@@ -1,7 +1,7 @@
 #pragma once
 
 
-// CMemPmPage ¶Ô»°¿ò
+// CMemPmPage å¯¹è¯æ¡†
 #include "MemPmTabPage.h"
 #include "MemPmBasicPage.h"		// 1
 #include "MemPmAbilityPage.h"	// 2
@@ -21,7 +21,7 @@ public:
 	DWORD	m_dwCurTabPage;
 	DWORD	m_dwCurPm;
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_MEM_PM };
 
 	VOID OnChangeUILang(VOID);
@@ -41,7 +41,7 @@ protected:
 
 	void ShowTabPage(DWORD dwPageIndex);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnBnClickedLangCn();
 	afx_msg void OnBnClickedLangJp();

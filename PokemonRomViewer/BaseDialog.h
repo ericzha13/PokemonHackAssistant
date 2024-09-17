@@ -1,25 +1,25 @@
 #pragma once
 
 
-// CBaseDialog ¶Ô»°¿ò
+// CBaseDialog å¯¹è¯æ¡†
 
 class CBaseDialog : public CDialog
 {
 	DECLARE_DYNAMIC(CBaseDialog)
 
 public:
-	CBaseDialog();   // ±ê×¼¹¹Ôìº¯Êı
+	CBaseDialog();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBaseDialog();
 
 	UINT	m_uTemplateId;
 
 	virtual void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged) = 0;
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 
 protected:
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	virtual void OnOK();
 	DECLARE_MESSAGE_MAP()

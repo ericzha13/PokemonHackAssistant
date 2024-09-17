@@ -1,7 +1,7 @@
 #pragma once
 
 
-// CMemMiscPage1 ¶Ô»°¿ò
+// CMemMiscPage1 å¯¹è¯æ¡†
 
 class CMemMiscPage1 : public CPropertyPage
 {
@@ -13,7 +13,7 @@ public:
 
 	VOID OnChangeUILang(VOID);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_MEM_MISC1 };
 
 protected:
@@ -22,7 +22,7 @@ protected:
 
 	afx_msg void SetItemDesc();
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 	afx_msg void OnBnClickedAddItem();

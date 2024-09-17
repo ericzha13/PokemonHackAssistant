@@ -9,14 +9,14 @@
 
 #define ENC_PAGE_COUNT	4
 
-// CEncDlg ¶Ô»°¿ò
+// CEncDlg å¯¹è¯æ¡†
 
 class CEncDlg : public CBaseDialog
 {
 	DECLARE_DYNAMIC(CEncDlg)
 
 public:
-	CEncDlg();   // ±ê×¼¹¹Ôìº¯Êı
+	CEncDlg();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CEncDlg();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
@@ -25,7 +25,7 @@ public:
 	DWORD	m_dwCurEnc;		// index in enc list
 	DWORD	m_dwCurPage;
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_ENC };
 
 protected:
@@ -50,7 +50,7 @@ protected:
 
 	static INT CALLBACK EncListSortFunc(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnLvnItemchangedEncList(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnBnClickedRefresh();

@@ -12,14 +12,14 @@
 
 #define BREED_PAGE_COUNT	(7)
 
-// CBreedDlg ¶Ô»°¿ò
+// CBreedDlg å¯¹è¯æ¡†
 
 class CBreedDlg : public CBaseDialog
 {
 	DECLARE_DYNAMIC(CBreedDlg)
 
 public:
-	CBreedDlg();   // ±ê×¼¹¹Ôìº¯Êı
+	CBreedDlg();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBreedDlg();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
@@ -31,7 +31,7 @@ public:
 
 	void SetCurPm(WORD wBreed);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_BREED };
 
 protected:
@@ -53,7 +53,7 @@ protected:
 
 	static INT CALLBACK SortPokemons(LPARAM lParam1, LPARAM lParam2, LPARAM lSortParam);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnTcnSelchangeTab(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnBnClickedRefresh();

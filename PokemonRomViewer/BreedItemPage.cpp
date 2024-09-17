@@ -1,4 +1,4 @@
-// BreedItemPage.cpp : ÊµÏÖÎÄ¼ş
+// BreedItemPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "BreedItemPage.h"
 
 
-// CBreedItemPage ¶Ô»°¿ò
+// CBreedItemPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CBreedItemPage, CBreedTabPage)
 CBreedItemPage::CBreedItemPage()
@@ -31,7 +31,7 @@ BEGIN_MESSAGE_MAP(CBreedItemPage, CBreedTabPage)
 END_MESSAGE_MAP()
 
 
-// CBreedItemPage ÏûÏ¢´¦Àí³ÌĞò
+// CBreedItemPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CBreedItemPage::OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged)
 {
 	DWORD	dwIndex;

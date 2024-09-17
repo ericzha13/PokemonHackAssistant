@@ -1,20 +1,20 @@
 #pragma once
 
 
-// CWaitDlg ¶Ô»°¿ò
+// CWaitDlg å¯¹è¯æ¡†
 
 class CWaitDlg : public CDialog
 {
 	DECLARE_DYNAMIC(CWaitDlg)
 
 public:
-	CWaitDlg();   // ±ê×¼¹¹Ôìº¯Êı
+	CWaitDlg();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CWaitDlg();
 
 	void BeginWait(DWORD dwRange);
 	void IncStep();
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_WAIT };
 
 protected:
@@ -22,7 +22,7 @@ protected:
 	UINT_PTR		m_uTimer;
 	DWORD			m_dwRange;
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual void OnOK();
 	virtual void OnCancel();
 	afx_msg void OnTimer(UINT nIDEvent);

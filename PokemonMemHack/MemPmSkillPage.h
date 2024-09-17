@@ -2,20 +2,20 @@
 #include "afxwin.h"
 
 
-// CMemPmSkillPage ¶Ô»°¿ò
+// CMemPmSkillPage å¯¹è¯æ¡†
 
 class CMemPmSkillPage : public CMemPmTabPage
 {
 	DECLARE_DYNAMIC(CMemPmSkillPage)
 
 public:
-	CMemPmSkillPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CMemPmSkillPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CMemPmSkillPage();
 
 	void TransData(BOOL bToControls);
 	void OnChangeUILang(VOID);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_MEM_PM_SKILL };
 
 protected:
@@ -33,7 +33,7 @@ protected:
 	afx_msg void SetSkillDesc(UINT uID);
 	afx_msg void SetSkillFromLegalSkillList(UINT uID);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnStnDblclickPpBoostAll();
 	afx_msg void OnLbnSelchangeLegalSkillList();

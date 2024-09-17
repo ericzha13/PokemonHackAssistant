@@ -1,4 +1,4 @@
-// ConfigDlg.cpp : ʵ���ļ�
+// ConfigDlg.cpp : 实现文件
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "ConfigDlg.h"
 
 
-// CConfigDlg �Ի���
+// CConfigDlg 对话框
 
 IMPLEMENT_DYNAMIC(CConfigDlg, CDialog)
 CConfigDlg::CConfigDlg(CWnd* pParent /*=NULL*/)
@@ -32,24 +32,24 @@ BEGIN_MESSAGE_MAP(CConfigDlg, CDialog)
 END_MESSAGE_MAP()
 
 
-// CConfigDlg ��Ϣ��������
+// CConfigDlg 消息处理程序
 
 BOOL CConfigDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
-	// TODO:  �ڴ����Ӷ���ĳ�ʼ��
+	// TODO:  在此添加额外的初始化
 	CheckDlgButton(IDC_UI_CN + m_dwLang, BST_CHECKED);
 	CheckDlgButton(IDC_COUNT_0 + m_dwCount, BST_CHECKED);
 	SetDlgItemText(IDC_ROM_FILE_PATH, m_szRomPath);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// �쳣: OCX ����ҳӦ���� FALSE
+	// 异常: OCX 属性页应返回 FALSE
 }
 
 void CConfigDlg::OnOK()
 {
-	// TODO: �ڴ�����ר�ô����/����û���
+	// TODO: 在此添加专用代码和/或调用基类
 	DWORD	dwIndex;
 
 	for(dwIndex = 0; dwIndex < 3; ++dwIndex)
@@ -68,7 +68,7 @@ void CConfigDlg::OnOK()
 
 void CConfigDlg::OnBnClickedBrowse()
 {
-	// TODO: �ڴ����ӿؼ�֪ͨ�����������
+	// TODO: 在此添加控件通知处理程序代码
 	CFileDialog		fd(	TRUE,
 						NULL,
 						m_szRomPath,

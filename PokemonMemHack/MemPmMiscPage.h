@@ -2,20 +2,20 @@
 #include "afxwin.h"
 
 
-// CMemPmMiscPage ¶Ô»°¿ò
+// CMemPmMiscPage å¯¹è¯æ¡†
 
 class CMemPmMiscPage : public CMemPmTabPage
 {
 	DECLARE_DYNAMIC(CMemPmMiscPage)
 
 public:
-	CMemPmMiscPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CMemPmMiscPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CMemPmMiscPage();
 
 	void TransData(BOOL bToControls);
 	void OnChangeUILang(VOID);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_MEM_PM_MISC };
 
 protected:
@@ -35,7 +35,7 @@ protected:
 	void GetPmRear();
 	void SetAddress();
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnBnClickedDecode();
 	afx_msg void OnBnClickedEncode();

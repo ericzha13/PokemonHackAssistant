@@ -1,4 +1,4 @@
-// EncTabPage.cpp : ÊµÏÖÎÄ¼ş
+// EncTabPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "EncTabPage.h"
 
 
-// CEncTabPage ¶Ô»°¿ò
+// CEncTabPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CEncTabPage, CBaseDialog)
 CEncTabPage::CEncTabPage()
@@ -33,7 +33,7 @@ BEGIN_MESSAGE_MAP(CEncTabPage, CBaseDialog)
 END_MESSAGE_MAP()
 
 
-// CEncTabPage ÏûÏ¢´¦Àí³ÌĞò
+// CEncTabPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CEncTabPage::OnCancel()
 {
 }

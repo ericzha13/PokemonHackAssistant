@@ -1,11 +1,11 @@
-// MemPmBasicPage.cpp : ÊµÏÖÎÄ¼ş
+// MemPmBasicPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonMemHack.h"
 #include "MemPmBasicPage.h"
 
-// CMemPmBasicPage ¶Ô»°¿ò
+// CMemPmBasicPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CMemPmBasicPage, CMemPmTabPage)
 CMemPmBasicPage::CMemPmBasicPage()
@@ -52,7 +52,7 @@ BEGIN_MESSAGE_MAP(CMemPmBasicPage, CMemPmTabPage)
 END_MESSAGE_MAP()
 
 
-// CMemPmBasicPage ÏûÏ¢´¦Àí³ÌĞò
+// CMemPmBasicPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 BOOL CMemPmBasicPage::OnInitDialog()
 {
 	CMemPmTabPage::OnInitDialog();
@@ -60,7 +60,7 @@ BOOL CMemPmBasicPage::OnInitDialog()
 	m_ctrlBreedList.SetExtendedStyle(0, CBES_EX_NOSIZELIMIT);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CMemPmBasicPage::TransData(BOOL bToControls)
@@ -243,9 +243,9 @@ void CMemPmBasicPage::SetPsDesc()
 	CHAR	b[5] = { 1, 1, 1, 1, 1 };
 	b[bPs / 5] += 1;
 	b[bPs % 5] -= 1;
-	static LPCTSTR sz[3] = { _T("£­"), _T("¡¡"), _T("£«") };
+	static LPCTSTR sz[3] = { _T("ï¼"), _T("ã€€"), _T("ï¼‹") };
 
-	szDesc.Format(_T("¡¡¡¡¡¡¡¡¹¥»÷£º%s·ÀÓù£º%s\nÃô½İ£º%sÌØ¹¥£º%sÌØ·À£º%s"),
+	szDesc.Format(_T("ã€€ã€€ã€€ã€€æ”»å‡»ï¼š%sé˜²å¾¡ï¼š%s\næ•æ·ï¼š%sç‰¹æ”»ï¼š%sç‰¹é˜²ï¼š%s"),
 					sz[b[0]], sz[b[1]], sz[b[2]], sz[b[3]], sz[b[4]]);
 
 	m_ctrlPsDesc.SetWindowText(szDesc);
@@ -426,20 +426,20 @@ void CMemPmBasicPage::SetSexList()
 			switch(bFR)
 			{
 			case 0xFF:
-				m_ctrlSexList.AddString(_T("²»Ã÷"));
+				m_ctrlSexList.AddString(_T("ä¸æ˜"));
 				break;
 
 			case 0xFE:
-				m_ctrlSexList.AddString(_T("È«¡â"));
+				m_ctrlSexList.AddString(_T("å…¨â™€"));
 				break;
 
 			case 0x00:
-				m_ctrlSexList.AddString(_T("È«¡á"));
+				m_ctrlSexList.AddString(_T("å…¨â™‚"));
 				break;
 
 			default:
-				m_ctrlSexList.AddString(_T("¡â"));
-				m_ctrlSexList.AddString(_T("¡á"));
+				m_ctrlSexList.AddString(_T("â™€"));
+				m_ctrlSexList.AddString(_T("â™‚"));
 				break;
 			}
 		}

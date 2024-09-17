@@ -2,7 +2,7 @@
 #include "afxwin.h"
 
 
-// CMemMiscPage0 ¶Ô»°¿ò
+// CMemMiscPage0 å¯¹è¯æ¡†
 
 class CMemMiscPage0 : public CPropertyPage
 {
@@ -14,7 +14,7 @@ public:
 
 	VOID OnChangeUILang(VOID);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_MEM_MISC0 };
 
 protected:
@@ -23,7 +23,7 @@ protected:
 
 	BOOL SetPlayerName(VOID);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	afx_msg void OnBnClickedRefresh();
 	afx_msg void OnBnClickedConfirm();
 	afx_msg void OnBnClickedEnableText();

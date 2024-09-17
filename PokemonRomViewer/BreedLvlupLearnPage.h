@@ -1,20 +1,20 @@
 #pragma once
 
 
-// CBreedLvlupLearnPage ¶Ô»°¿ò
+// CBreedLvlupLearnPage å¯¹è¯æ¡†
 
 class CBreedLvlupLearnPage : public CBreedTabPage
 {
 	DECLARE_DYNAMIC(CBreedLvlupLearnPage)
 
 public:
-	CBreedLvlupLearnPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CBreedLvlupLearnPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBreedLvlupLearnPage();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
 	void TransData(BOOL bToControls);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_BREED_LVLUP_LEARN };
 
 protected:
@@ -34,7 +34,7 @@ protected:
 
 	static INT CALLBACK SortSkillList(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnLvnItemchangedLulList(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnNMDblclkLulList(NMHDR *pNMHDR, LRESULT *pResult);

@@ -1,14 +1,14 @@
 #pragma once
 
 
-// CEncFishPage ¶Ô»°¿ò
+// CEncFishPage å¯¹è¯æ¡†
 
 class CEncFishPage : public CEncTabPage
 {
 	DECLARE_DYNAMIC(CEncFishPage)
 
 public:
-	CEncFishPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CEncFishPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CEncFishPage();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
@@ -16,7 +16,7 @@ public:
 
 	void SetFocusedEntry(DWORD dwEncEntryIndex);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_ROM_ENC_FISH };
 
 protected:
@@ -28,7 +28,7 @@ protected:
 	void GetBreed(DWORD dwIndex);
 	void SetBreed(DWORD dwIndex);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	afx_msg void OnCbnSelchangeEncBreedList(UINT uID);
 	afx_msg void OnBnClickedEncSetBreed(UINT uID);
 	afx_msg void OnSetFocus(UINT uID);

@@ -2,20 +2,20 @@
 #include "afxwin.h"
 
 
-// CBreedItemPage ¶Ô»°¿ò
+// CBreedItemPage å¯¹è¯æ¡†
 
 class CBreedItemPage : public CBreedTabPage
 {
 	DECLARE_DYNAMIC(CBreedItemPage)
 
 public:
-	CBreedItemPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CBreedItemPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBreedItemPage();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
 	void TransData(BOOL bToControls);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_BREED_ITEM };
 
 protected:
@@ -23,6 +23,6 @@ protected:
 
 	afx_msg void SetItemDesc(UINT uID);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	DECLARE_MESSAGE_MAP()
 };

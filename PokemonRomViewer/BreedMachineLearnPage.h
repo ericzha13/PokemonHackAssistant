@@ -1,20 +1,20 @@
 #pragma once
 
 
-// CBreedMachineLearnPage ¶Ô»°¿ò
+// CBreedMachineLearnPage å¯¹è¯æ¡†
 
 class CBreedMachineLearnPage : public CBreedTabPage
 {
 	DECLARE_DYNAMIC(CBreedMachineLearnPage)
 
 public:
-	CBreedMachineLearnPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CBreedMachineLearnPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBreedMachineLearnPage();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
 	void TransData(BOOL bToControls);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_BREED_MACHINE_LEARN };
 
 protected:
@@ -41,7 +41,7 @@ protected:
 
 	static INT CALLBACK SortSkillList(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnButtonClicked(UINT uID);
 	afx_msg void OnChangeSortOrder(UINT uID);

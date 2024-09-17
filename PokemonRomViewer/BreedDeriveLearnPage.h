@@ -1,20 +1,20 @@
 #pragma once
 
 
-// CBreedDeriveLearnPage ¶Ô»°¿ò
+// CBreedDeriveLearnPage å¯¹è¯æ¡†
 
 class CBreedDeriveLearnPage : public CBreedTabPage
 {
 	DECLARE_DYNAMIC(CBreedDeriveLearnPage)
 
 public:
-	CBreedDeriveLearnPage();   // ±ê×¼¹¹Ôìº¯Êı
+	CBreedDeriveLearnPage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBreedDeriveLearnPage();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
 	void TransData(BOOL bToControls);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_BREED_DERIVE_LEARN };
 
 protected:
@@ -32,7 +32,7 @@ protected:
 	void SetSkill();
 	void GetSkills();
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnLvnItemchangedDlList(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnNMDblclkDlList(NMHDR *pNMHDR, LRESULT *pResult);

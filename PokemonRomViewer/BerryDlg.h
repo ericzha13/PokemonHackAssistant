@@ -2,14 +2,14 @@
 #include "afxcmn.h"
 
 
-// CBerryDlg ¶Ô»°¿ò
+// CBerryDlg å¯¹è¯æ¡†
 
 class CBerryDlg : public CBaseDialog
 {
 	DECLARE_DYNAMIC(CBerryDlg)
 
 public:
-	CBerryDlg();   // ±ê×¼¹¹Ôìº¯Êı
+	CBerryDlg();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBerryDlg();
 
 	DWORD	m_dwCurSel;
@@ -18,7 +18,7 @@ public:
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
 	void SetCurSkill(WORD wSkill);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_BEERY };
 
 protected:
@@ -30,7 +30,7 @@ protected:
 
 	static INT CALLBACK SortBerries(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnBnClickedRefresh();
 	afx_msg void OnBnClickedConfirm();

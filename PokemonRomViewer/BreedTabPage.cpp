@@ -1,4 +1,4 @@
-// BreedTabPage.cpp : ÊµÏÖÎÄ¼þ
+// BreedTabPage.cpp : å®žçŽ°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "BreedTabPage.h"
 
 
-// CBreedTabPage ¶Ô»°¿ò
+// CBreedTabPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CBreedTabPage, CDialog)
 CBreedTabPage::CBreedTabPage()
@@ -29,7 +29,7 @@ BEGIN_MESSAGE_MAP(CBreedTabPage, CDialog)
 END_MESSAGE_MAP()
 
 
-// CBreedTabPage ÏûÏ¢´¦Àí³ÌÐò
+// CBreedTabPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CBreedTabPage::GetCurrentBreed()
 {
 	if(!rom.m_bOpened || theApp.m_dlgBreed.m_wCurBreed >= BREED_COUNT)
@@ -40,7 +40,7 @@ void CBreedTabPage::GetCurrentBreed()
 	else
 	{
 		m_pBreed = rom.GetBreedListEntry(theApp.m_dlgBreed.m_wCurBreed);
-		if(theApp.m_dlgBreed.m_wCurBreed == 410)	// Special for ¥Ç¥£¥ª¥­¥·¥¹
+		if(theApp.m_dlgBreed.m_wCurBreed == 410)	// Special for ãƒ‡ã‚£ã‚ªã‚­ã‚·ã‚¹
 		{
 			m_pBreedAbilities = rom.GetDeoxysBreedAbilities();
 		}

@@ -1,4 +1,4 @@
-// BreedTypePage.cpp : ÊµÏÖÎÄ¼ş
+// BreedTypePage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -6,7 +6,7 @@
 #include "BreedTypePage.h"
 
 
-// CBreedTypePage ¶Ô»°¿ò
+// CBreedTypePage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CBreedTypePage, CBreedTabPage)
 CBreedTypePage::CBreedTypePage()
@@ -32,7 +32,7 @@ BEGIN_MESSAGE_MAP(CBreedTypePage, CBreedTabPage)
 END_MESSAGE_MAP()
 
 
-// CBreedTypePage ÏûÏ¢´¦Àí³ÌĞò
+// CBreedTypePage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CBreedTypePage::OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged)
 {
 	if(bRomChanged)
@@ -66,7 +66,7 @@ BOOL CBreedTypePage::OnInitDialog()
 {
 	CBreedTabPage::OnInitDialog();
 
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯
+	// TODO:  åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–
 	DWORD	dwIndex;
 	CString	szText;
 
@@ -89,5 +89,5 @@ BOOL CBreedTypePage::OnInitDialog()
 	m_ctrlEGList[1].SetCurSel(0);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }

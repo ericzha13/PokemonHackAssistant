@@ -2,27 +2,27 @@
 #include "afxwin.h"
 
 
-// CBreedTypePage ¶Ô»°¿ò
+// CBreedTypePage å¯¹è¯æ¡†
 
 class CBreedTypePage : public CBreedTabPage
 {
 	DECLARE_DYNAMIC(CBreedTypePage)
 
 public:
-	CBreedTypePage();   // ±ê×¼¹¹Ôìº¯Êı
+	CBreedTypePage();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CBreedTypePage();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
 	void TransData(BOOL bToControls);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_BREED_TYPE };
 
 protected:
 	CListBox	m_ctrlTypeList[2];
 	CListBox	m_ctrlEGList[2];
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	DECLARE_MESSAGE_MAP()
 };

@@ -1,11 +1,11 @@
-// BreedDeriveLearnPage.cpp : ÊµÏÖÎÄ¼ş
+// BreedDeriveLearnPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonRomViewer.h"
 #include "BreedDeriveLearnPage.h"
 
-// CBreedDeriveLearnPage ¶Ô»°¿ò
+// CBreedDeriveLearnPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CBreedDeriveLearnPage, CBreedTabPage)
 CBreedDeriveLearnPage::CBreedDeriveLearnPage()
@@ -36,19 +36,19 @@ BEGIN_MESSAGE_MAP(CBreedDeriveLearnPage, CBreedTabPage)
 END_MESSAGE_MAP()
 
 
-// CBreedDeriveLearnPage ÏûÏ¢´¦Àí³ÌĞò
+// CBreedDeriveLearnPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 BOOL CBreedDeriveLearnPage::OnInitDialog()
 {
 	CBreedTabPage::OnInitDialog();
 
-	// TODO:  ÔÚ´ËÌí¼Ó¶îÍâµÄ³õÊ¼»¯
+	// TODO:  åœ¨æ­¤æ·»åŠ é¢å¤–çš„åˆå§‹åŒ–
 	m_ctrlLearnList.SetExtendedStyle(LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES | LVS_EX_LABELTIP | LVS_EX_HEADERDRAGDROP);
 
-	m_ctrlLearnList.InsertColumn(0, _T("¼¼ÄÜ"), LVCFMT_LEFT, 120, 0);
-	m_ctrlLearnList.InsertColumn(1, _T("¼¼ÄÜ±àºÅ"), LVCFMT_LEFT, 40, 1);
+	m_ctrlLearnList.InsertColumn(0, _T("æŠ€èƒ½"), LVCFMT_LEFT, 120, 0);
+	m_ctrlLearnList.InsertColumn(1, _T("æŠ€èƒ½ç¼–å·"), LVCFMT_LEFT, 40, 1);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CBreedDeriveLearnPage::GetCurDeriveLearnList()
@@ -75,7 +75,7 @@ void CBreedDeriveLearnPage::RefreshLearnList()
 	CString	szText;
 	LPCTSTR	szFmt33[3] = { _T("%-3hu"), _T("%-3hu"), _T("%03hX") };
 
-	szText.Format(_T("%luÏî"), m_dwDeriveLearnCount);
+	szText.Format(_T("%lué¡¹"), m_dwDeriveLearnCount);
 	SetDlgItemText(IDC_DL_COUNT, szText);
 
 	if(!m_pDeriveLearnList)
@@ -212,7 +212,7 @@ void CBreedDeriveLearnPage::GetSkills()
 void CBreedDeriveLearnPage::OnLvnItemchangedDlList(NMHDR *pNMHDR, LRESULT *pResult)
 {
 	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	if(	m_pDeriveLearnList &&
@@ -227,7 +227,7 @@ void CBreedDeriveLearnPage::OnLvnItemchangedDlList(NMHDR *pNMHDR, LRESULT *pResu
 
 void CBreedDeriveLearnPage::OnNMDblclkDlList(NMHDR *pNMHDR, LRESULT *pResult)
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	*pResult = 0;
 
 	DWORD_PTR	dwData;
@@ -246,7 +246,7 @@ void CBreedDeriveLearnPage::OnNMDblclkDlList(NMHDR *pNMHDR, LRESULT *pResult)
 
 void CBreedDeriveLearnPage::OnBnClickedDlFromSkillDlg()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	WORD	wSkill = theApp.m_dlgSkill.m_wCurSkill;
 
 	if(wSkill < SKILL_COUNT)
@@ -255,7 +255,7 @@ void CBreedDeriveLearnPage::OnBnClickedDlFromSkillDlg()
 
 void CBreedDeriveLearnPage::OnBnClickedDlSetSkill()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	WORD	wSkill;
 	CString	szText;
 	LVITEM	lvi;

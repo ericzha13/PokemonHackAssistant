@@ -1,10 +1,10 @@
-// MemPmPage.cpp : ÊµÏÖÎÄ¼ş
+// MemPmPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonMemHack.h"
 
-// CMemPmPage ¶Ô»°¿ò
+// CMemPmPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CMemPmPage, CPropertyPage)
 CMemPmPage::CMemPmPage()
@@ -13,19 +13,19 @@ CMemPmPage::CMemPmPage()
 	m_dwCurPm = -1;
 	m_dwCurTabPage = -1;
 
-	m_pageBasic.m_szPageName = _T("»ù±¾");
+	m_pageBasic.m_szPageName = _T("åŸºæœ¬");
 	m_rgpPages[0] = &m_pageBasic;
 
-	m_pageAbility.m_szPageName = _T("ÄÜÁ¦");
+	m_pageAbility.m_szPageName = _T("èƒ½åŠ›");
 	m_rgpPages[1] = &m_pageAbility;
 
-	m_pageSkill.m_szPageName = _T("¼¼ÄÜ");
+	m_pageSkill.m_szPageName = _T("æŠ€èƒ½");
 	m_rgpPages[2] = &m_pageSkill;
 
-	m_pageRibbon.m_szPageName = _T("¶Ğ´ø");
+	m_pageRibbon.m_szPageName = _T("ç¼å¸¦");
 	m_rgpPages[3] = &m_pageRibbon;
 
-	m_pageMisc.m_szPageName = _T("ÆäËü");
+	m_pageMisc.m_szPageName = _T("å…¶å®ƒ");
 	m_rgpPages[4] = &m_pageMisc;
 }
 
@@ -59,7 +59,7 @@ BEGIN_MESSAGE_MAP(CMemPmPage, CPropertyPage)
 END_MESSAGE_MAP()
 
 
-// CMemPmPage ÏûÏ¢´¦Àí³ÌĞò
+// CMemPmPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CMemPmPage::ShowTabPage(DWORD dwPageIndex)
 {
 	if(m_dwCurTabPage != dwPageIndex)
@@ -109,7 +109,7 @@ BOOL CMemPmPage::OnInitDialog()
 	ShowTabPage(0);
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CMemPmPage::SetPmList(BOOL bSelectionOnly)
@@ -139,7 +139,7 @@ void CMemPmPage::SetPmList(BOOL bSelectionOnly)
 		if(wBreed < BREED_COUNT)
 			szText += cfg.pBreedNameList[wBreed].rgszText[cfg.dwLang];
 		else
-			szText += _T("Î´Öª");
+			szText += _T("æœªçŸ¥");
 		lvi.pszText = szText.GetBuffer();
 		if(dwIndex < dwCount)
 			m_ctrlPmList.SetItem(&lvi);
@@ -367,7 +367,7 @@ void CMemPmPage::OnBnClickedMoveUp()
 	{
 		if(!g_MemHack.SwapActivePokemons(m_dwCurPm, m_dwCurPm - 1))
 		{
-			AfxMessageBox(_T("Ê§°Ü£¡"), MB_OK | MB_ICONERROR);
+			AfxMessageBox(_T("å¤±è´¥ï¼"), MB_OK | MB_ICONERROR);
 		}
 		else
 		{
@@ -384,7 +384,7 @@ void CMemPmPage::OnBnClickedMoveDown()
 	{
 		if(!g_MemHack.SwapActivePokemons(m_dwCurPm, m_dwCurPm + 1))
 		{
-			AfxMessageBox(_T("Ê§°Ü£¡"), MB_OK | MB_ICONERROR);
+			AfxMessageBox(_T("å¤±è´¥ï¼"), MB_OK | MB_ICONERROR);
 		}
 		else
 		{

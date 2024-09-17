@@ -1,4 +1,4 @@
-// MemPmSkillPage.cpp : ÊµÏÖÎÄ¼ş
+// MemPmSkillPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
@@ -19,7 +19,7 @@ WORD	g_rgwSortedSkillToIndex[SKILL_COUNT];	// g_rgwSortedSkillToIndex[skill id] 
 
 int SortSkillsProc(LPCVOID pElem0, LPCVOID pElem1);
 
-// CMemPmSkillPage ¶Ô»°¿ò
+// CMemPmSkillPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CMemPmSkillPage, CMemPmTabPage)
 CMemPmSkillPage::CMemPmSkillPage()
@@ -65,7 +65,7 @@ BEGIN_MESSAGE_MAP(CMemPmSkillPage, CMemPmTabPage)
 END_MESSAGE_MAP()
 
 
-// CMemPmSkillPage ÏûÏ¢´¦Àí³ÌĞò
+// CMemPmSkillPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CMemPmSkillPage::TransData(BOOL bToControls)
 {
 	BYTE	bIndex;
@@ -226,7 +226,7 @@ BOOL CMemPmSkillPage::OnInitDialog()
 	}
 
 	return TRUE;  // return TRUE unless you set the focus to a control
-	// Òì³£: OCX ÊôĞÔÒ³Ó¦·µ»Ø FALSE
+	// å¼‚å¸¸: OCX å±æ€§é¡µåº”è¿”å› FALSE
 }
 
 void CMemPmSkillPage::OnStnDblclickPpBoostAll()

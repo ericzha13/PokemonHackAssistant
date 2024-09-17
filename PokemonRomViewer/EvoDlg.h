@@ -1,14 +1,14 @@
 #pragma once
 
 
-// CEvoDlg ¶Ô»°¿ò
+// CEvoDlg å¯¹è¯æ¡†
 
 class CEvoDlg : public CBaseDialog
 {
 	DECLARE_DYNAMIC(CEvoDlg)
 
 public:
-	CEvoDlg();   // ±ê×¼¹¹Ôìº¯Êı
+	CEvoDlg();   // æ ‡å‡†æ„é€ å‡½æ•°
 	virtual ~CEvoDlg();
 
 	void OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged);
@@ -19,7 +19,7 @@ public:
 
 	void SetCurPm(WORD wBreed);
 
-// ¶Ô»°¿òÊı¾İ
+// å¯¹è¯æ¡†æ•°æ®
 	enum { IDD = IDD_EVO };
 
 protected:
@@ -49,7 +49,7 @@ protected:
 
 	static INT CALLBACK SortPokemons(LPARAM lParam1, LPARAM lParam2, LPARAM lSortParam);
 
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æŒ
 	virtual BOOL OnInitDialog();
 	afx_msg void OnBnClickedRefresh();
 	afx_msg void OnBnClickedConfirm();

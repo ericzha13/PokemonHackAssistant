@@ -1,11 +1,11 @@
-// BreedAblPage.cpp : ÊµÏÖÎÄ¼ş
+// BreedAblPage.cpp : å®ç°æ–‡ä»¶
 //
 
 #include "stdafx.h"
 #include "PokemonRomViewer.h"
 #include "BreedAblPage.h"
 
-// CBreedAblPage ¶Ô»°¿ò
+// CBreedAblPage å¯¹è¯æ¡†
 
 IMPLEMENT_DYNAMIC(CBreedAblPage, CBreedTabPage)
 CBreedAblPage::CBreedAblPage()
@@ -42,7 +42,7 @@ BEGIN_MESSAGE_MAP(CBreedAblPage, CBreedTabPage)
 END_MESSAGE_MAP()
 
 
-// CBreedAblPage ÏûÏ¢´¦Àí³ÌĞò
+// CBreedAblPage æ¶ˆæ¯å¤„ç†ç¨‹åº
 void CBreedAblPage::OnConfigChanged(BOOL bRomChanged, BOOL bUILangChanged)
 {
 	if(bRomChanged)
@@ -120,7 +120,7 @@ void CBreedAblPage::GetIndvAbl(DWORD dwIndex)
 
 void CBreedAblPage::OnEnChangeBrdAbl(UINT uID)
 {
-	// TODO:  ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO:  åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	GetIndvAbl(uID - IDC_BRD_HP);
 	CalcIndvSum();
 }
@@ -139,57 +139,57 @@ void CBreedAblPage::EnableExportButtons(BOOL bEnable)
 
 void CBreedAblPage::OnStnDblclickShowExportButtons()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	EnableExportButtons(TRUE);
 }
 
 void CBreedAblPage::OnBnClickedExportBrd()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	#ifndef UNICODE
 	#error UNICODE Version ONLY!
 	#endif
 
 	static LPCTSTR szTypes[] =
 	{
-		L"¥Î©`¥Ş¥ë",	// 00
-		L"¤«¤¯¤È¤¦",	// 01
-		L"¤Ò¤³¤¦",		// 02
-		L"¤É¤¯",		// 03
-		L"¤¸¤á¤ó",		// 04
-		L"¤¤¤ï",		// 05
-		L"¤à¤·",		// 06
-		L"¥´©`¥¹¥È",	// 07
-		L"¤Ï¤¬¤Í",		// 08
-		L"£¿£¿£¿",		// 09
-		L"¤Û¤Î¤ª",		// 0A
-		L"¤ß¤º",		// 0B
-		L"¤¯¤µ",		// 0C
-		L"¤Ç¤ó¤­",		// 0D
-		L"¥¨¥¹¥Ñ©`",	// 0E
-		L"¤³¤ª¤ê",		// 0F
-		L"¥É¥é¥´¥ó",	// 10
-		L"¤¢¤¯"			// 11
+		L"ãƒ`ãƒãƒ«",	// 00
+		L"ã‹ãã¨ã†",	// 01
+		L"ã²ã“ã†",		// 02
+		L"ã©ã",		// 03
+		L"ã˜ã‚ã‚“",		// 04
+		L"ã„ã‚",		// 05
+		L"ã‚€ã—",		// 06
+		L"ã‚´`ã‚¹ãƒˆ",	// 07
+		L"ã¯ãŒã­",		// 08
+		L"ï¼Ÿï¼Ÿï¼Ÿ",		// 09
+		L"ã»ã®ãŠ",		// 0A
+		L"ã¿ãš",		// 0B
+		L"ãã•",		// 0C
+		L"ã§ã‚“ã",		// 0D
+		L"ã‚¨ã‚¹ãƒ‘`",	// 0E
+		L"ã“ãŠã‚Š",		// 0F
+		L"ãƒ‰ãƒ©ã‚´ãƒ³",	// 10
+		L"ã‚ã"			// 11
 	};
 
 	static LPCTSTR szEggGroups[] =
 	{
-		L"£¿£¿£¿",		// 00
-		L"¹Öª•",		// 01
-		L"Ë®ÖĞ£±",		// 02
-		L"³æ",			// 03
-		L"ïwĞĞ",		// 04
-		L"ê‘ÉÏ",		// 05
-		L"Ñı¾«",		// 06
-		L"Ö²Îï",		// 07
-		L"ÈËĞÎ",		// 08
-		L"Ë®ÖĞ£³",		// 09
-		L"ãkÎï",		// 0A
-		L"²»¶¨ĞÎ",		// 0B
-		L"Ë®ÖĞ£²",		// 0C
-		L"¥á¥¿¥â¥ó",	// 0D
-		L"¸o",			// 0E
-		L"Î´°kÒŠ"		// 0F
+		L"ï¼Ÿï¼Ÿï¼Ÿ",		// 00
+		L"æ€ª",		// 01
+		L"æ°´ä¸­ï¼‘",		// 02
+		L"è™«",			// 03
+		L"wè¡Œ",		// 04
+		L"ä¸Š",		// 05
+		L"å¦–ç²¾",		// 06
+		L"æ¤ç‰©",		// 07
+		L"äººå½¢",		// 08
+		L"æ°´ä¸­ï¼“",		// 09
+		L"kç‰©",		// 0A
+		L"ä¸å®šå½¢",		// 0B
+		L"æ°´ä¸­ï¼’",		// 0C
+		L"ãƒ¡ã‚¿ãƒ¢ãƒ³",	// 0D
+		L"o",			// 0E
+		L"æœªk"		// 0F
 	};
 
 	BOOL	bResult;
@@ -499,29 +499,29 @@ namespace BRD_EXPORT
 
 void CBreedAblPage::OnBnClickedExportEvo()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	#ifndef UNICODE
 	#error UNICODE Version ONLY!
 	#endif
 
 	EvoConditions	rgEvoConditions[] =
 	{
-		{ L"ßM»¯²»ÄÜ",					L"",		evo_none },		// 00
-		{ L"¤Ê¤Ä¤­¶È220",				L"",		evo_none },		// 01
-		{ L"¤Ê¤Ä¤­¶È220¡¢ÎçÇ°",			L"",		evo_none },		// 02
-		{ L"¤Ê¤Ä¤­¶È220¡¢Îçáá",			L"",		evo_none },		// 03
-		{ L"¥ì¥Ù¥ë%lu",					L"",		evo_level },	// 04
-		{ L"Í¨ĞÅ½»“Q",					L"",		evo_none },		// 05
-		{ L"%s¤ò³Ö¤¿¤»¤ÆÍ¨ĞÅ½»“Q",		L"",		evo_item },		// 06
+		{ L"MåŒ–ä¸èƒ½",					L"",		evo_none },		// 00
+		{ L"ãªã¤ãåº¦220",				L"",		evo_none },		// 01
+		{ L"ãªã¤ãåº¦220ã€åˆå‰",			L"",		evo_none },		// 02
+		{ L"ãªã¤ãåº¦220ã€åˆå¾Œ",			L"",		evo_none },		// 03
+		{ L"ãƒ¬ãƒ™ãƒ«%lu",					L"",		evo_level },	// 04
+		{ L"é€šä¿¡äº¤Q",					L"",		evo_none },		// 05
+		{ L"%sã‚’æŒãŸã›ã¦é€šä¿¡äº¤Q",		L"",		evo_item },		// 06
 		{ L"%s",						L"",		evo_item },		// 07
-		{ L"¹¥“Ä>·ÀÓù¡¢¥ì¥Ù¥ë%lu",		L"",		evo_level },	// 08
-		{ L"¹¥“Ä=·ÀÓù¡¢¥ì¥Ù¥ë%lu",		L"",		evo_level },	// 09
-		{ L"¹¥“Ä<·ÀÓù¡¢¥ì¥Ù¥ë%lu",		L"",		evo_level },	// 0A
-		{ L"ĞÔ¸ñ‚%%10<5¡¢¥ì¥Ù¥ë%lu",	L"",		evo_level },	// 0B
-		{ L"ĞÔ¸ñ‚%%10>4¡¢¥ì¥Ù¥ë%lu",	L"",		evo_level },	// 0C
-		{ L"ÊÖ³Ö¤Á¤¬¤¢¤ê¡¢¥ì¥Ù¥ë%lu",	L"",		evo_level },	// 0D
-		{ L"ÊÖ³Ö¤Á¤¬¤Ê¤¤¡¢¥ì¥Ù¥ë%lu",	L"",		evo_level },	// 0E
-		{ L"ÃÀ¤·¤µ%lu",					L"",		evo_beauty }	// 0F
+		{ L"æ”»>é˜²å¾¡ã€ãƒ¬ãƒ™ãƒ«%lu",		L"",		evo_level },	// 08
+		{ L"æ”»=é˜²å¾¡ã€ãƒ¬ãƒ™ãƒ«%lu",		L"",		evo_level },	// 09
+		{ L"æ”»<é˜²å¾¡ã€ãƒ¬ãƒ™ãƒ«%lu",		L"",		evo_level },	// 0A
+		{ L"æ€§æ ¼%%10<5ã€ãƒ¬ãƒ™ãƒ«%lu",	L"",		evo_level },	// 0B
+		{ L"æ€§æ ¼%%10>4ã€ãƒ¬ãƒ™ãƒ«%lu",	L"",		evo_level },	// 0C
+		{ L"æ‰‹æŒã¡ãŒã‚ã‚Šã€ãƒ¬ãƒ™ãƒ«%lu",	L"",		evo_level },	// 0D
+		{ L"æ‰‹æŒã¡ãŒãªã„ã€ãƒ¬ãƒ™ãƒ«%lu",	L"",		evo_level },	// 0E
+		{ L"ç¾ã—ã•%lu",					L"",		evo_beauty }	// 0F
 	};
 
 	BOOL	bResult;
@@ -643,7 +643,7 @@ void CBreedAblPage::OnBnClickedExportEvo()
 
 void CBreedAblPage::OnBnClickedExportLearn()
 {
-	// TODO: ÔÚ´ËÌí¼Ó¿Ø¼şÍ¨Öª´¦Àí³ÌĞò´úÂë
+	// TODO: åœ¨æ­¤æ·»åŠ æ§ä»¶é€šçŸ¥å¤„ç†ç¨‹åºä»£ç 
 	#ifndef UNICODE
 	#error UNICODE Version ONLY!
 	#endif
@@ -768,9 +768,9 @@ void CBreedAblPage::OnBnClickedExportMachine()
 		{
 			wSkill = rom.m_pMachineSkillList[bMachine];
 			if(bMachine < 50)
-				szText.Format(_T("¤ï¤¶¥Ş¥·¥ó%02hu\t%hu\r\n"), bMachine + 1, wSkill);
+				szText.Format(_T("ã‚ã–ãƒã‚·ãƒ³%02hu\t%hu\r\n"), bMachine + 1, wSkill);
 			else
-				szText.Format(_T("¤Ò¤Ç¤ó¥Ş¥·¥ó%hu\t%hu\r\n"), bMachine - 49, wSkill);
+				szText.Format(_T("ã²ã§ã‚“ãƒã‚·ãƒ³%hu\t%hu\r\n"), bMachine - 49, wSkill);
 			expFile.Write((LPCTSTR)(szText), szText.GetLength() * sizeof(TCHAR));
 		}
 
@@ -806,37 +806,37 @@ void CBreedAblPage::OnBnClickedExportSkill()
 
 	static LPCTSTR szTypes[] =
 	{
-		L"¥Î©`¥Ş¥ë",	// 00
-		L"¤«¤¯¤È¤¦",	// 01
-		L"¤Ò¤³¤¦",		// 02
-		L"¤É¤¯",		// 03
-		L"¤¸¤á¤ó",		// 04
-		L"¤¤¤ï",		// 05
-		L"¤à¤·",		// 06
-		L"¥´©`¥¹¥È",	// 07
-		L"¤Ï¤¬¤Í",		// 08
-		L"£¿£¿£¿",		// 09
-		L"¤Û¤Î¤ª",		// 0A
-		L"¤ß¤º",		// 0B
-		L"¤¯¤µ",		// 0C
-		L"¤Ç¤ó¤­",		// 0D
-		L"¥¨¥¹¥Ñ©`",	// 0E
-		L"¤³¤ª¤ê",		// 0F
-		L"¥É¥é¥´¥ó",	// 10
-		L"¤¢¤¯"			// 11
+		L"ãƒ`ãƒãƒ«",	// 00
+		L"ã‹ãã¨ã†",	// 01
+		L"ã²ã“ã†",		// 02
+		L"ã©ã",		// 03
+		L"ã˜ã‚ã‚“",		// 04
+		L"ã„ã‚",		// 05
+		L"ã‚€ã—",		// 06
+		L"ã‚´`ã‚¹ãƒˆ",	// 07
+		L"ã¯ãŒã­",		// 08
+		L"ï¼Ÿï¼Ÿï¼Ÿ",		// 09
+		L"ã»ã®ãŠ",		// 0A
+		L"ã¿ãš",		// 0B
+		L"ãã•",		// 0C
+		L"ã§ã‚“ã",		// 0D
+		L"ã‚¨ã‚¹ãƒ‘`",	// 0E
+		L"ã“ãŠã‚Š",		// 0F
+		L"ãƒ‰ãƒ©ã‚´ãƒ³",	// 10
+		L"ã‚ã"			// 11
 	};
 
 	static LPCTSTR szTargets[] =
 	{
-		_T("”³Ò»Ìå"),		// 00
-		_T("²»¶¨"),			// 01
-		_T("£¿£¿£¿"),		// 02
-		_T("”³¤È×Ô·Ö"),		// 04
-		_T("”³È«Ìå"),		// 08
-		_T("×Ô·Ö"),			// 10
-		_T("×Ô·ÖÒÔÍâ"),		// 20
-		_T("È«Ìå"),			// 40
-		_T("£¿£¿£¿")		// 80
+		_T("éª‹æƒ¶"),		// 00
+		_T("ä¸å®š"),			// 01
+		_T("ï¼Ÿï¼Ÿï¼Ÿ"),		// 02
+		_T("é•¿èŒ¸è‹‘"),		// 04
+		_T("æ©™ä½“"),		// 08
+		_T("è‡ªåˆ†"),			// 10
+		_T("è‡ªåˆ†ä»¥å¤–"),		// 20
+		_T("å…¨ä½“"),			// 40
+		_T("ï¼Ÿï¼Ÿï¼Ÿ")		// 80
 	};
 
 	BOOL	bResult;
@@ -943,9 +943,9 @@ void CBreedAblPage::OnBnClickedExportSkill()
 			else
 			{
 				if(pSkills[wSkill] <= 50)
-					szTemp.Format(_T("¤ï¤¶¥Ş¥·¥ó%02hu"), pSkills[wSkill]);
+					szTemp.Format(_T("ã‚ã–ãƒã‚·ãƒ³%02hu"), pSkills[wSkill]);
 				else
-					szTemp.Format(_T("¤Ò¤Ç¤ó¥Ş¥·¥ó%hu"), pSkills[wSkill] - 50);
+					szTemp.Format(_T("ã²ã§ã‚“ãƒã‚·ãƒ³%hu"), pSkills[wSkill] - 50);
 			}
 			szText += _T("\t") + szTemp;
 
